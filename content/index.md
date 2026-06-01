@@ -1,5 +1,5 @@
-<script data-front-matter>
-	const title = 'Parsons MPS Communication Design'
-</script>
+---
+title: Parsons MPS Communication Design
+---
 
 Hello, world!
