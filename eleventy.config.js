@@ -1,7 +1,7 @@
 export default (eleventyConfig) => {
 	eleventyConfig.addGlobalData('layout', 'base.liquid')
 	eleventyConfig.setFrontMatterParsingOptions({
-		delimiters: ['<script front-matter>', '</script>'],
+		delimiters: ['<script data-front-matter>', '</script>'],
 		language: 'js',
 	})
 
