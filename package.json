@@ -1,10 +1,16 @@
 {
+	"dependencies": {
+		"@11ty/eleventy": "4.0.0-alpha.7"
+	},
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",
 			"version": "^11.5.0",
 			"onFail": "download"
 		}
+	},
+	"scripts": {
+		"serve": "npx @11ty/eleventy --serve --port=80 --incremental"
 	},
 	"type": "module"
 }
