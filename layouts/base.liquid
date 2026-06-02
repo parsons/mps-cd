@@ -9,6 +9,15 @@
 		<title>{{ title }}</title>
 	</head>
 	<body>
+		<nav>
+			<ul>
+				{% for eachPage in collections.page %}
+					<li {%- if eachPage.url == page.url %} aria-current="page"{% endif -%}>
+						<a href="{{ eachPage.url }}">{{ eachPage.data.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
 		{{ content }}
 	</body>
 </html>
