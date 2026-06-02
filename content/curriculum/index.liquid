@@ -1,4 +1,25 @@
 <h1>{{ title }}</h1>
 <p>The Master of Professional Studies is awarded for completion of 30 credits. Students must maintain a 3.0 cumulative grade point average and fulfill all requirements in a timely manner.</p>
 <p>The one-year curriculum requires full-time enrollment.</p>
+<h2>First semester</h2>
+<table>
+	<tbody>
+		{% for course in curriculum.fall %}
+			<tr>
+				<td>
+					{%- if course.number %}
+						<p>{{course.number}}</p>
+					{% endif %}
+					<p>{{course.credits}} Credits</p>
+				</td>
+				<td>
+					<a href="{{ courseCatalog | append: course.number | remove: ' ' }}">
+						<p>{{course.title}}</p>
+					</a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<h2>Second semester</h2>
 <p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ courseCatalog }}">The New School’s Course Catalog</a>.</p>
