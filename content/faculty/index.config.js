@@ -206,5 +206,197 @@ export default {
 				url:   'https://brianwatterson.com',
 			},
 		]
-	}
+	},
+
+	guests: [
+		{
+			first: 'Bijan',
+			last:  'Berahimi',
+		},
+		{
+			first: 'Virginia',
+			last:  'Chow',
+		},
+		{
+			first: 'Archie Lee',
+			last:  'Coates IV',
+		},
+		{
+			first: 'Lyanne',
+			last:  'Dubon',
+		},
+		{
+			first: 'Dylan',
+			last:  'Fisher',
+		},
+		{
+			first: 'Nika',
+			last:  'Fisher',
+		},
+		{
+			first: 'Jeffrey',
+			last:  'Franklin',
+		},
+		{
+			first: 'Harry',
+			last:  'Gassel',
+		},
+		{
+			first: 'Daniel',
+			last:  'Goddemeyer',
+		},
+		{
+			first: 'August',
+			last:  'Heffner',
+		},
+		{
+			first: 'Pablo',
+			last:  'Honey',
+		},
+		{
+			first: 'Jenny',
+			last:  'Kang',
+		},
+		{
+			first: 'David',
+			last:  'Kille',
+		},
+		{
+			first: 'Alex',
+			last:  'Limpaecher',
+		},
+		{
+			first: 'LaiYee',
+			last:  'Lori',
+		},
+		{
+			first: 'Molly',
+			last:  'Lafferty',
+		},
+		{
+			first: 'Yenwei',
+			last:  'Liu',
+		},
+		{
+			first: 'Igal',
+			last:  'Nassima',
+		},
+		{
+			first: 'Eric',
+			last:  'Nylund',
+		},
+		{
+			first: 'Justin',
+			last:  'Ouellette',
+		},
+		{
+			first: 'Chris',
+			last:  'Pross',
+		},
+		{
+			first: 'Julika',
+			last:  'Rudelius',
+		},
+		{
+			first: 'Andrew',
+			last:  'Rutledge',
+		},
+		{
+			first: 'Jeffrey Alan',
+			last:  'Scudder',
+		},
+		{
+			first: 'Justin',
+			last:  'Ternullo',
+		},
+		{
+			first: 'Keith',
+			last:  'Venkiteswaran',
+		},
+		{
+			first: 'Paul',
+			last:  'Vlachou',
+		},
+		{
+			first: 'Lydia',
+			last:  'White',
+		},
+		{
+			first: 'Laurel',
+			last:  'Schwulst',
+		},
+		{
+			first: 'Ben',
+			last:  'Tuttle',
+		},
+		{
+			first: 'Lynne',
+			last:  'Yun',
+		},
+		{
+			first: 'Piper',
+			last:  'Haywood',
+		},
+		{
+			first: 'Talia',
+			last:  'Cotton',
+		},
+		{
+			first: 'Carolyn',
+			last:  'Berry',
+		},
+		{
+			first: 'Vidya',
+			last:  'Keshavan',
+		},
+		{
+			first: 'Diana',
+			last:  'Mejia',
+		},
+		{
+			first: 'Husani',
+			last:  'Barnwell',
+			url:   'http://husanibarnwell.com',
+		},
+		{
+			first: 'Poppy',
+			last:  'Chen',
+			url:   'http://poppychen.com',
+		},
+		{
+			first: 'Sheila',
+			last:  'Cheng',
+			url:   'http://sheilacheng.com',
+		},
+		{
+			first: 'Samia',
+			last:  'Husari',
+			url:   'http://samia.design',
+		},
+		{
+			first: 'Nikhil',
+			last:  'Misra',
+			url:   'http://www.nikhilmisra.com',
+		},
+		{
+			first: 'Patricia',
+			last:  'Robinson',
+			url:   'https://patriciarobinson.com',
+		},
+		{
+			first: 'Sonali',
+			last:  'Sampat',
+			url:   'https://www.sonalisampat.com',
+		},
+		{
+			first: 'Danielle',
+			last:  'Santucci',
+			url:   'http://danielle-santucci.com',
+		},
+		{
+			first: 'Patrick',
+			last:  'Serr',
+			url:   'http://patrickserr.com',
+		},
+	]
 }

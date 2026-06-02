@@ -18,3 +18,13 @@
 		{% endfor %}
 	</ul>
 </details>
+<h2>Visiting Critics</h2>
+<p>In addition to our core faculty, the MPS Communication Design program hosts a variety of workshops, lectures, and reviews with a wide range of external critics.</p>
+<ul>
+	{% assign sortedGuests = guests | sort: 'last' %}
+	{% for guest in sortedGuests %}
+		<li>
+			<p>{{ guest.first }} {{ guest.last }}</p>
+		</li>
+	{% endfor %}
+</ul>
