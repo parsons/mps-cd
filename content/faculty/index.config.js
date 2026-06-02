@@ -230,7 +230,7 @@ export default {
 		},
 		{
 			first: 'Nika',
-			last:  'Fisher',
+			last:  'Simovich Fisher',
 		},
 		{
 			first: 'Jeffrey',
@@ -339,63 +339,6 @@ export default {
 		{
 			first: 'Talia',
 			last:  'Cotton',
-		},
-		{
-			first: 'Carolyn',
-			last:  'Berry',
-		},
-		{
-			first: 'Vidya',
-			last:  'Keshavan',
-		},
-		{
-			first: 'Diana',
-			last:  'Mejia',
-		},
-		{
-			first: 'Husani',
-			last:  'Barnwell',
-			url:   'http://husanibarnwell.com',
-		},
-		{
-			first: 'Poppy',
-			last:  'Chen',
-			url:   'http://poppychen.com',
-		},
-		{
-			first: 'Sheila',
-			last:  'Cheng',
-			url:   'http://sheilacheng.com',
-		},
-		{
-			first: 'Samia',
-			last:  'Husari',
-			url:   'http://samia.design',
-		},
-		{
-			first: 'Nikhil',
-			last:  'Misra',
-			url:   'http://www.nikhilmisra.com',
-		},
-		{
-			first: 'Patricia',
-			last:  'Robinson',
-			url:   'https://patriciarobinson.com',
-		},
-		{
-			first: 'Sonali',
-			last:  'Sampat',
-			url:   'https://www.sonalisampat.com',
-		},
-		{
-			first: 'Danielle',
-			last:  'Santucci',
-			url:   'http://danielle-santucci.com',
-		},
-		{
-			first: 'Patrick',
-			last:  'Serr',
-			url:   'http://patrickserr.com',
 		},
 	]
 }
