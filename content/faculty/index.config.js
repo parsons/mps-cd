@@ -6,7 +6,7 @@ export default {
 			{
 				first: 'Adam',
 				last:  'Brodowski',
-				url:   'https://abrodowski.com',
+				url:   'https://www.linkedin.com/in/brodowski',
 			},
 			{
 				first: 'Clara',
@@ -83,7 +83,7 @@ export default {
 			{
 				first: 'Abby',
 				last:  'Ricarte',
-				url:   'http://abbyricarte.com',
+				url:   'https://abbyricarte.xyz/',
 			},
 			{
 				first: 'Brendan',
@@ -116,8 +116,8 @@ export default {
 				url:   'http://www.jacobheftmann.com',
 			},
 			{
-				first: 'Tuan',
-				last:  'Quoc Pham',
+				first: 'Tuan Quoc',
+				last:  'Pham',
 				url:   'https://tuanpham.info',
 			},
 			{
@@ -203,7 +203,6 @@ export default {
 			{
 				first: 'Brian',
 				last:  'Watterson',
-				url:   'https://brianwatterson.com',
 			},
 		]
 	},

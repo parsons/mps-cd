@@ -2,8 +2,9 @@
 <ul>
 	{% assign sortedCurrent = faculty.current | sort: 'last' %}
 	{% for instructor in sortedCurrent %}
+		{% assign instructorName = instructor.first | append: ' ' | append: instructor.last %}
 		<li>
-			<a href="{{ instructor.url }}">{{ instructor.first }} {{ instructor.last }}</a>
+			<a href="{{ instructor.url }}">{{ instructorName }}</a>
 		</li>
 	{% endfor %}
 </ul>
@@ -12,8 +13,13 @@
 	<ul>
 		{% assign sortedPrevious = faculty.previous | sort: 'last' %}
 		{% for instructor in sortedPrevious %}
+			{% assign instructorName = instructor.first | append: ' ' | append: instructor.last %}
 			<li>
-				<a href="{{ instructor.url }}">{{ instructor.first }} {{ instructor.last }}</a>
+				{% if instructor.url %}
+					<a href="{{ instructor.url }}">{{ instructorName }}</a>
+				{% else %}
+					<p>{{ instructorName }}</p>
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>
