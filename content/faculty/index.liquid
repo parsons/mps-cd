@@ -7,3 +7,14 @@
 		</li>
 	{% endfor %}
 </ul>
+<details>
+	<summary>Previous {{ title | downcase }}</summary>
+	<ul>
+		{% assign sortedPrevious = faculty.previous | sort: 'last' %}
+		{% for instructor in sortedPrevious %}
+			<li>
+				<a href="{{ instructor.url }}">{{ instructor.first }} {{ instructor.last }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</details>
