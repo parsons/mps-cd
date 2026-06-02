@@ -1,0 +1,8 @@
+<ul>
+	{% assign sorted = people | sort: 'last' %}
+	{% for person in sorted %}
+		<li>
+			<a {%- if person.url %} href="{{ person.url }}" {% endif %}>{{ person.first }} {{ person.last }}</a>
+		</li>
+	{% endfor %}
+</ul>
