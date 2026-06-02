@@ -1,6 +1,6 @@
 export default (eleventyConfig) => {
 	eleventyConfig.addGlobalData('layout', 'base.liquid')
-	eleventyConfig.setDataFileSuffixes(['.config'])
+	eleventyConfig.setDataFileSuffixes(['.config']) // Cosmetic, ex: `content.config.js`.
 
 	return {
 		dir: {
