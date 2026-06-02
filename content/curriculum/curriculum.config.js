@@ -3,7 +3,7 @@ export default {
 
 	courseCatalog: 'https://courses.newschool.edu/courses/',
 	curriculum: {
-		fall: [
+		first: [
 			{
 				number:  'PMCD 5101',
 				credits:  6,
@@ -18,6 +18,27 @@ export default {
 				number:  'PMCD 5200',
 				credits:  3,
 				title:   'Visual Culture Seminar',
+			},
+			{
+				credits:  3,
+				title:   'Elective',
+			},
+		],
+		second: [
+			{
+				number:  'PMCD 5102',
+				credits:  6,
+				title:   'Major Studio 2',
+			},
+			{
+				number:  'PMCD 5002',
+				credits:  3,
+				title:   'Typography and Interaction 2',
+			},
+			{
+				number:  'PMCD 5300',
+				credits:  3,
+				title:   'Methods and Practices',
 			},
 			{
 				credits:  3,
