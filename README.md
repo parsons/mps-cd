@@ -5,7 +5,7 @@ This is a ground-up rebuild of the [previous](https://github.com/parsons/mpscd.p
 
 ## The Setup
 
-This version is built in [Eleventy](https://www.11ty.dev), with good old-fashioned HTML files strung together with 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/). It uses only plain/native CSS and vanilla JavaScript on top of that—no Sass, no pipeline, no framework.
+This version is built in [Eleventy](https://www.11ty.dev), with good old-fashioned HTML strung together with 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/). Structured data is contained in sidecar [`page.config.js`](content/content.config.js) files, as needed. It uses only plain/native CSS and vanilla JavaScript on top of that—no Sass, no pipeline, no framework, no fuss.
 
 You will need `pnpm` [on your machine](https://pnpm.io/installation). Then run `pnpm install` once to grab our handful of [build dependencies](package.json).
 
