@@ -1,5 +1,5 @@
 # MPS CD
-This is a ground-up rebuild of the [previous](../mpscd.parsons.edu) Parsons MPS CD program website, for reasons of simplicity, flexibility, and longevity.
+This is a ground-up rebuild of the [previous](https://github.com/parsons/mpscd.parsons.edu) Parsons MPS CD program website, for reasons of simplicity, flexibility, and longevity.
 
 <br>
 
