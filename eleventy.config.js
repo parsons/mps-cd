@@ -1,5 +1,6 @@
 export default (eleventyConfig) => {
 	eleventyConfig.addGlobalData('layout', 'base.liquid')
+	eleventyConfig.setDataFileSuffixes(['.config'])
 
 	return {
 		dir: {
