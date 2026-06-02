@@ -1,1 +1,9 @@
 <h1>{{ title }}</h1>
+<ul>
+	{% assign sortedCurrent = faculty.current | sort: 'last' %}
+	{% for instructor in sortedCurrent %}
+		<li>
+			<a href="{{ instructor.url }}">{{ instructor.first }} {{ instructor.last }}</a>
+		</li>
+	{% endfor %}
+</ul>
