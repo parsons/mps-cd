@@ -8,7 +8,7 @@ export default (eleventyConfig) => {
 			output: '_site',
 
 			// Relative to `input`.
-			layouts: '../layouts',
+			layouts: '../layout',
 		}
 	}
 }
