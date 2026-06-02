@@ -1,3 +1,3 @@
 export default {
-	order: 2
+	order: 2,
 }

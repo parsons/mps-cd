@@ -1,3 +1,4 @@
+// “Parent Directory Data File” for everything (needs to remain `content.` not `index.`).
 export default {
 	// Some common strings.
 	school:        'Parsons',
