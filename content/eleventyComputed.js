@@ -5,7 +5,9 @@ export default {
 	concentration: 'Digital Product Design',
 
 	// URLs.
-	catalogUrl: 'https://courses.newschool.edu/courses/',
+	catalogUrl:     'https://courses.newschool.edu/courses/',
+	applyUrl:       'https://www.newschool.edu/parsons/how-to-apply-graduate/',
+	infoRequestUrl: 'https://apply.newschool.edu/register/requestinfo',
 
 	// Derived data.
 	programTitle: data => `${data.school} ${data.program}`,
