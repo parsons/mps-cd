@@ -16,6 +16,7 @@ export default (eleventyConfig) => {
 			output: '_site',
 
 			// Relative to `input`.
+			data: '../data',
 			includes: '../layout/include',
 			layouts: '../layout',
 		}

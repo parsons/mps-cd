@@ -14,13 +14,11 @@
 						<p>{{course.credits}} Credits</p>
 					</td>
 					<td>
-						<a href="{{ courseCatalog | append: course.number | remove: ' ' }}">
-							<p>{{course.title}}</p>
-						</a>
+						<a href="{{ catalogUrl | append: course.number | remove: ' ' }}">{{course.title}}</a>
 					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 {% endfor %}
-<p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ courseCatalog }}">The New School’s Course Catalog</a>.</p>
+<p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ catalogUrl }}">The New School’s Course Catalog</a>.</p>
