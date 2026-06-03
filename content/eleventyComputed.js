@@ -13,6 +13,12 @@ export default {
 	programTitle: data => `${data.school} ${data.program}`,
 	title: data => data.page.fileSlug // Use the folder name…
 		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
-		|| data.programTitle // Fallback to program.
+		|| data.programTitle, // Fallback to program.
+
+	// Remodel `students` object from folder structure, flattening the last level (info.js) out.
+	students: ({ students }) =>
+		Object.entries(students)
+			.map(([year, group]) => [year, Object.values(group).map(({ info }) => info)])
+			.sort(([a], [b]) => b - a) // Descending years.
 
 }
