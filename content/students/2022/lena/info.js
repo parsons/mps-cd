@@ -1,5 +1,5 @@
 export default {
 	first: 'Lena',
 	last:  'Chen',
-	url:   'https://lenachenleqi.cargo.site/',
+	url:   'https://lenachenleqi.cargo.site',
 }

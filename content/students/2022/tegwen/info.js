@@ -1,5 +1,5 @@
 export default {
 	first: 'Tegwen',
 	last:  'McKenzie',
-	url:   'https://tegwen.ca/',
+	url:   'https://tegwen.ca',
 }

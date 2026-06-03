@@ -1,5 +1,5 @@
 export default {
 	first: 'Rita Giordana',
 	last:  'Pulpo',
-	url:   'http://giordanapulpo.com/',
+	url:   'http://giordanapulpo.com',
 }

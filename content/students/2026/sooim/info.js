@@ -1,5 +1,5 @@
 export default {
 	first: 'Sooim',
 	last:  'Kang',
-	url:   'https://sooimkang.com/',
+	url:   'https://sooimkang.com',
 }

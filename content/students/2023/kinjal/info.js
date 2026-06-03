@@ -1,5 +1,5 @@
 export default {
 	first: 'Kinjal',
 	last:  'Gawaskar',
-	url:   'https://www.kinjalgawaskar.com/',
+	url:   'https://www.kinjalgawaskar.com',
 }

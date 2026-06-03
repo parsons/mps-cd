@@ -1,5 +1,5 @@
 export default {
 	first: 'Evgenii',
 	last:  'Astapov',
-	url:   'https://astapable.com/',
+	url:   'https://astapable.com',
 }

@@ -1,5 +1,5 @@
 export default {
 	first: 'Ziyao',
 	last:  'Sun',
-	url:   'https://ziyao.cargo.site/',
+	url:   'https://ziyao.cargo.site',
 }

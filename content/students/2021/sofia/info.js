@@ -1,5 +1,5 @@
 export default {
 	first: 'Sofia',
 	last:  'Moon',
-	url:   'https://www.sofiamoon.com/',
+	url:   'https://www.sofiamoon.com',
 }

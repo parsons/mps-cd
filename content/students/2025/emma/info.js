@@ -1,5 +1,5 @@
 export default {
-	first: 'Emma de',
-	last:  'Suyrot',
+	first: 'Emma',
+	last:  'de Suyrot',
 	url:   'https://readymag.website/u3658646869/5250755',
 }

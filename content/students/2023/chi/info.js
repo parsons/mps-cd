@@ -1,5 +1,5 @@
 export default {
 	first: 'Chi',
 	last:  'Pham',
-	url:   'https://www.saymycheese.com/',
+	url:   'https://www.saymycheese.com',
 }

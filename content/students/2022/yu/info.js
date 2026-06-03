@@ -1,5 +1,5 @@
 export default {
 	first: 'Yu',
 	last:  'Pan',
-	url:   'https://carlapan.com/',
+	url:   'https://carlapan.com',
 }

@@ -1,5 +1,5 @@
 export default {
 	first: 'Trenton',
 	last:  'Soto',
-	url:   'https://trentonsoto.design/',
+	url:   'https://trentonsoto.design',
 }

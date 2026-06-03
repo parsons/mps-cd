@@ -1,5 +1,5 @@
 export default {
 	first: 'Yuxi',
 	last:  'Lyu',
-	url:   'https://yuxilyu.com/',
+	url:   'https://yuxilyu.com',
 }

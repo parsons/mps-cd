@@ -1,5 +1,5 @@
 export default {
 	first: 'Madhu Mithaa',
 	last:  'Gengatheran',
-	url:   'https://madhugengatheran.myportfolio.com/',
+	url:   'https://madhugengatheran.myportfolio.com',
 }

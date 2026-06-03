@@ -1,5 +1,5 @@
 export default {
 	first: 'Roseanne',
 	last:  'Chao',
-	url:   'http://www.roseannechao.com/',
+	url:   'http://www.roseannechao.com',
 }

@@ -1,5 +1,5 @@
 export default {
 	first: 'Noor',
 	last:  'Abdussaboor',
-	url:   'https://noorabdussaboor.framer.website/',
+	url:   'https://noorabdussaboor.framer.website',
 }
