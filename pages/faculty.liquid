@@ -3,11 +3,13 @@ const order = 2
 ---
 
 <h1>{{ title }}</h1>
-{% include 'people.liquid', people: faculty.current %}
+{% assign currentFaculty = faculty | where: 'current' %}
+{% render 'people.liquid', people: currentFaculty %}
 <details>
 	<summary>Previous {{ title | downcase }}</summary>
-	{% include 'people.liquid', people: faculty.previous %}
+	{% assign previousFaculty = faculty | reject: 'current' %}
+	{% render 'people.liquid', people: previousFaculty %}
 </details>
 <h2>Visiting Critics</h2>
 <p>In addition to our core faculty, the MPS Communication Design program hosts a variety of workshops, lectures, and reviews with a wide range of external critics.</p>
-{% include 'people.liquid', people: guests %}
+{% render 'people.liquid', people: guests %}
