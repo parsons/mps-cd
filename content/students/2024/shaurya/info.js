@@ -1,5 +1,5 @@
 export default {
-	"first": "Shaurya",
-	"last": "Mehta",
-	"url": "https://www.nirvaan.work"
+	first: 'Shaurya',
+	last:  'Mehta',
+	url:   'https://www.nirvaan.work',
 }

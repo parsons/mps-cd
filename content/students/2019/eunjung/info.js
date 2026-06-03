@@ -1,4 +1,4 @@
 export default {
-	"first": "Eunjung",
-	"last": "Kim"
+	first: 'Eunjung',
+	last:  'Kim',
 }

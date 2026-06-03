@@ -1,5 +1,5 @@
 export default {
-	"first": "Tina",
-	"last": "Li",
-	"url": "https://lij851.myportfolio.com"
+	first: 'Tina',
+	last:  'Li',
+	url:   'https://lij851.myportfolio.com',
 }

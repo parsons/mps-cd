@@ -1,5 +1,5 @@
 export default {
-	"first": "Kaiwen",
-	"last": "Tao",
-	"url": "https://www.taokaiwen.design/"
+	first: 'Kaiwen',
+	last:  'Tao',
+	url:   'https://www.taokaiwen.design/',
 }

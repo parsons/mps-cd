@@ -1,5 +1,5 @@
 export default {
-	"first": "Po Hao",
-	"last": "Lee",
-	"url": "https://www.haotodesign.com/"
+	first: 'Po Hao',
+	last:  'Lee',
+	url:   'https://www.haotodesign.com/',
 }

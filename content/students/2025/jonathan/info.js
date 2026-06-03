@@ -1,5 +1,5 @@
 export default {
-	"first": "Jonathan",
-	"last": "Chiang",
-	"url": "https://jonathanchiang.com"
+	first: 'Jonathan',
+	last:  'Chiang',
+	url:   'https://jonathanchiang.com',
 }

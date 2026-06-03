@@ -1,5 +1,5 @@
 export default {
-	"first": "kinza",
-	"last": "ghanchi",
-	"url": "https://k881-droid.github.io/"
+	first: 'kinza',
+	last:  'ghanchi',
+	url:   'https://k881-droid.github.io/',
 }

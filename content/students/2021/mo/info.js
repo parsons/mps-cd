@@ -1,5 +1,5 @@
 export default {
-	"first": "Mo",
-	"last": "Labban",
-	"url": "http://labbouf.com/"
+	first: 'Mo',
+	last:  'Labban',
+	url:   'http://labbouf.com/',
 }

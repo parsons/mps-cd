@@ -1,5 +1,5 @@
 export default {
-	"first": "Fahila",
-	"last": "Mansuri",
-	"url": "http://fahilamansuri.com/"
+	first: 'Fahila',
+	last:  'Mansuri',
+	url:   'http://fahilamansuri.com/',
 }

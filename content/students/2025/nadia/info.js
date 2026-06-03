@@ -1,5 +1,5 @@
 export default {
-	"first": "Nadia",
-	"last": "Batchelor",
-	"url": "https://nadabdesigns.com"
+	first: 'Nadia',
+	last:  'Batchelor',
+	url:   'https://nadabdesigns.com',
 }
