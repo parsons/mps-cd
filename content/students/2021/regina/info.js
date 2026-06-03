@@ -1,5 +1,5 @@
 export default {
-	first: 'Regina La',
-	last:  'O’',
+	first: 'Regina',
+	last:  'La O’',
 	url:   'http://www.reginalao.design',
 }
