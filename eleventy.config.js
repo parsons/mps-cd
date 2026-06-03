@@ -12,13 +12,13 @@ export default (eleventyConfig) => {
 
 	return {
 		dir: {
-			input: 'content',
+			input: 'pages',
 			output: '_site',
 
 			// Relative to `input`.
-			data: '../data',
-			includes: '../layout/include',
-			layouts: '../layout',
+			data: '../content',
+			includes: '../templates/components',
+			layouts: '../templates',
 		}
 	}
 }
