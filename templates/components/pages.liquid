@@ -1,0 +1,8 @@
+<ul>
+	{% assign pages = collections.all | where: 'data.order' | sort: 'data.order' %}
+	{% for eachPage in pages %}
+		<li>
+			<a {%- if eachPage.url == page.url %} aria-current="page"{% endif %} href="{{ eachPage.url | url }}">{{ eachPage.data.title }}</a>
+		</li>
+	{% endfor %}
+</ul>
