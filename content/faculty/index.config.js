@@ -211,46 +211,57 @@ export default {
 		{
 			first: 'Bijan',
 			last:  'Berahimi',
+			url:   'https://www.linkedin.com/in/bijanberahimi'
 		},
 		{
 			first: 'Virginia',
 			last:  'Chow',
+			url:   'https://www.linkedin.com/in/virginia-chow'
 		},
 		{
 			first: 'Archie Lee',
 			last:  'Coates IV',
+			url:   'https://www.linkedin.com/in/archieleecoatesiv'
 		},
 		{
 			first: 'Lyanne',
-			last:  'Dubon',
+			last:  'Dubon-Aguilar',
+			url:   'https://www.lyannedubon.com'
 		},
 		{
 			first: 'Dylan',
 			last:  'Fisher',
+			url:   'https://www.dylanfisher.com'
 		},
 		{
 			first: 'Nika',
 			last:  'Simovich Fisher',
+			url:   'https://www.nikafisher.com'
 		},
 		{
 			first: 'Jeffrey',
 			last:  'Franklin',
+			url:   'https://www.linkedin.com/in/jeffrey-franklin-94339978'
 		},
 		{
 			first: 'Harry',
 			last:  'Gassel',
+			url:   'https://harrygassel.info'
 		},
 		{
 			first: 'Daniel',
 			last:  'Goddemeyer',
+			url:   'https://danielgoddemeyer.com'
 		},
 		{
 			first: 'August',
 			last:  'Heffner',
+			url:   'https://www.augustheffner.com'
 		},
 		{
 			first: 'Pablo',
 			last:  'Honey',
+			url:   'https://pablo.blog'
 		},
 		{
 			first: 'Jenny',
@@ -259,86 +270,107 @@ export default {
 		{
 			first: 'David',
 			last:  'Kille',
+			url:   'https://www.linkedin.com/in/david-kille-51049b27'
 		},
 		{
 			first: 'Alex',
 			last:  'Limpaecher',
+			url:   'https://www.alexlimpaecher.com'
 		},
 		{
 			first: 'LaiYee',
-			last:  'Lori',
+			last:  'Ho',
+			url:   'https://www.laiyeeho.com'
 		},
 		{
 			first: 'Molly',
 			last:  'Lafferty',
+			url:   'http://mklafferty.com'
 		},
 		{
 			first: 'Yenwei',
 			last:  'Liu',
+			url:   'https://www.yenweiliu.com'
 		},
 		{
 			first: 'Igal',
 			last:  'Nassima',
+			url:   'https://www.linkedin.com/in/igalnassima'
 		},
 		{
 			first: 'Eric',
 			last:  'Nylund',
+			url:   'https://www.linkedin.com/in/eric-nylund-0b4bba164'
 		},
 		{
 			first: 'Justin',
 			last:  'Ouellette',
+			url:   'https://jstn.net'
 		},
 		{
 			first: 'Chris',
 			last:  'Pross',
+			url:   'https://christopherpross.com'
 		},
 		{
 			first: 'Julika',
 			last:  'Rudelius',
+			url:   'https://rudelius.org'
 		},
 		{
 			first: 'Andrew',
 			last:  'Rutledge',
+			url:   'https://www.andrewrutledge.com'
 		},
 		{
 			first: 'Jeffrey Alan',
 			last:  'Scudder',
+			url:   'https://jas.life'
 		},
 		{
 			first: 'Justin',
 			last:  'Ternullo',
+			url:   'https://www.linkedin.com/in/justinternullo'
 		},
 		{
 			first: 'Keith',
-			last:  'Venkiteswaran',
+			last:  'VanWarren',
+			url:   'https://www.linkedin.com/in/keithvanwarren'
 		},
 		{
 			first: 'Paul',
 			last:  'Vlachou',
+			url:   'https://www.linkedin.com/in/paul-vlachou'
 		},
 		{
 			first: 'Lydia',
 			last:  'White',
+			url:   'http://lydiawhite.info'
 		},
 		{
 			first: 'Laurel',
 			last:  'Schwulst',
+			url:   'https://laurelschwulst.com'
 		},
 		{
 			first: 'Ben',
 			last:  'Tuttle',
+			url:   'https://www.btuttle.com'
 		},
 		{
 			first: 'Lynne',
 			last:  'Yun',
+			url:   'https://www.lynneyun.com'
 		},
 		{
 			first: 'Piper',
 			last:  'Haywood',
+			url:   'https://piperhaywood.com'
 		},
 		{
 			first: 'Talia',
 			last:  'Cotton',
+			url:   'https://taliacotton.com'
 		},
 	]
 }
