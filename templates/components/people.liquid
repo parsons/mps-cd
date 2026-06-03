@@ -1,5 +1,5 @@
 <ul>
-	{% assign sorted = people | sort: 'last' %}
+	{% assign sorted = people | sort_natural: 'last' %}
 	{% for person in sorted %}
 		<li>
 			<a {%- if person.url %} href="{{ person.url }}" {% endif %}>{{ person.first }} {{ person.last }}</a>
