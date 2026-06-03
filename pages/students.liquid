@@ -3,3 +3,7 @@ const order = 3
 ---
 
 <h1>{{ title }}</h1>
+{% for year in students %}
+	<h2>{{ year.first }}</h2>
+	{% render 'people.liquid', people: year.last %}
+{% endfor %}
