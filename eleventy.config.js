@@ -4,6 +4,9 @@ export default (eleventyConfig) => {
 	// Set common base layout for everything.
 	eleventyConfig.addGlobalData('layout', 'base.liquid')
 
+	// JS > YAML.
+	eleventyConfig.setFrontMatterParsingOptions({ language: 'js' })
+
 	// Override filter with relative URLs, for portability. (Using regular function for `this`.)
 	eleventyConfig.addFilter('url', function (target) {
 		const result = path.relative(this.page.url, target) || '.'
