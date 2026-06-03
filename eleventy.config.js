@@ -1,8 +1,8 @@
 import path from 'node:path'
 
 export default (eleventyConfig) => {
-	eleventyConfig.addGlobalData('layout', 'base.liquid') // Set layout for everything.
-	eleventyConfig.setDataFileSuffixes(['.config']) // Cosmetic, ex: `content.config.js`.
+	// Set common base layout for everything.
+	eleventyConfig.addGlobalData('layout', 'base.liquid')
 
 	// Override filter with relative URLs, for portability. (Using regular function for `this`.)
 	eleventyConfig.addFilter('url', function (target) {
