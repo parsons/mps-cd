@@ -6,69 +6,69 @@ export default [
 		current: true
 	},
 	{
-		first: 'Clara',
-		last:  'Bunker',
-		url:   'https://clarajoybunker.com',
+		first:   'Clara',
+		last:    'Bunker',
+		url:     'https://clarajoybunker.com',
 		current: true
 	},
 	{
-		first: 'Juliette',
-		last:  'Cezzar',
-		url:   'https://juliettecezzar.com',
+		first:   'Juliette',
+		last:    'Cezzar',
+		url:     'https://juliettecezzar.com',
 		current: true
 	},
 	{
-		first: 'Sally',
-		last:  'Chung',
-		url:   'https://www.sallyhychung.com',
+		first:   'Sally',
+		last:    'Chung',
+		url:     'https://www.sallyhychung.com',
 		current: true
 	},
 	{
-		first: 'Michael',
-		last:  'Fehrenbach',
-		url:   'https://michaelfehrenbach.com',
+		first:   'Michael',
+		last:    'Fehrenbach',
+		url:     'https://michaelfehrenbach.com',
 		current: true
 	},
 	{
-		first: 'Dana',
-		last:  'Jefferson',
-		url:   'https://danajefferson.com',
+		first:   'Dana',
+		last:    'Jefferson',
+		url:     'https://danajefferson.com',
 		current: true
 	},
 	{
-		first: 'Andrew',
-		last:  'LeClair',
-		url:   'https://andrewleclair.com',
+		first:   'Andrew',
+		last:    'LeClair',
+		url:     'https://andrewleclair.com',
 		current: true
 	},
 	{
-		first: 'Eric',
-		last:  'Li',
-		url:   'https://eric.young.li',
+		first:   'Eric',
+		last:    'Li',
+		url:     'https://eric.young.li',
 		current: true
 	},
 	{
-		first: 'Amanda',
-		last:  'Pinsker',
-		url:   'https://amandapinsker.com',
+		first:   'Amanda',
+		last:    'Pinsker',
+		url:     'https://amandapinsker.com',
 		current: true
 	},
 	{
-		first: 'Lauren',
-		last:  'Schlanger',
-		url:   'https://www.linkedin.com/in/schlanger',
+		first:   'Lauren',
+		last:    'Schlanger',
+		url:     'https://www.linkedin.com/in/schlanger',
 		current: true
 	},
 	{
-		first: 'Mianwei',
-		last:  'Wang',
-		url:   'https://mianweiwang.com',
+		first:   'Mianwei',
+		last:    'Wang',
+		url:     'https://mianweiwang.com',
 		current: true
 	},
 	{
-		first: 'Rijk',
-		last:  'van Zanten',
-		url:   'https://rijk.nyc',
+		first:   'Rijk',
+		last:    'van Zanten',
+		url:     'https://rijk.nyc',
 		current: true
 	},
 	{
