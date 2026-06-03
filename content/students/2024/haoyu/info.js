@@ -1,0 +1,5 @@
+export default {
+	"first": "Haoyu",
+	"last": "Chao",
+	"url": "https://www.wennychao.com"
+}

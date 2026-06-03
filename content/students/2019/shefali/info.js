@@ -1,0 +1,5 @@
+export default {
+	"first": "Shefali",
+	"last": "Agarwal",
+	"url": "https://shefalidesigns.com"
+}

@@ -1,0 +1,5 @@
+export default {
+	"first": "Rijk van",
+	"last": "Zanten",
+	"url": "https://rijks.website"
+}

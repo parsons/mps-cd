@@ -1,0 +1,5 @@
+export default {
+	"first": "Lucy",
+	"last": "Kim",
+	"url": "www.lucykim.design"
+}

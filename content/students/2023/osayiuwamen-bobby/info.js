@@ -1,0 +1,5 @@
+export default {
+	"first": "Osayiuwamen Bobby",
+	"last": "Omoregbee",
+	"url": "https://osayiuwamenomoregbee.squarespace.com/"
+}

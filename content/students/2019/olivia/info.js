@@ -1,0 +1,5 @@
+export default {
+	"first": "Olivia",
+	"last": "Yan",
+	"url": "http://olivia-yan.com"
+}

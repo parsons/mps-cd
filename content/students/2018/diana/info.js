@@ -1,0 +1,5 @@
+export default {
+	"first": "Diana",
+	"last": "Mejia",
+	"url": "https://www.dianamejia.co"
+}
