@@ -4,8 +4,12 @@
 	</nav>
 	{% for section in text.footer.section %}
 		<section>
-			<h2>{{ section.title }}</h2>
+			<h2>{{ section.heading }}</h2>
 			{{ section.blurb | markdown }}
 		</section>
 	{% endfor %}
+	<aside>
+		<h2>{{ text.footer.colophon.heading }}</h2>
+		{{ text.footer.colophon.blurb | markdown }}
+	</aside>
 </footer>

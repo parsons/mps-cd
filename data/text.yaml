@@ -50,18 +50,22 @@ apply:
 
 footer:
   section:
-    - title: Request Information
+    - heading: Request Information
       blurb: |
         More info can be found in the Admissions Office’s [Admissions Request Form]({{ links.requestInfo }})
 
-    - title: Admission Events
+    - heading: Admission Events
       blurb: |
         Find out about upcoming events using the [Graduate Admission Events Calendar]({{ links.events }})
 
-    - title: Admission Contact
+    - heading: Admission Contact
       blurb: |
         Admissions Office: thinkparsonsgrad@newschool.edu
 
-    - title: Program Contact
+    - heading: Program Contact
       blurb: |
         Andrew LeClair, Director: leclaira@newschool.edu
+  colophon:
+    heading: Colophon
+    blurb: |
+      This site was built with the help of Parsons MPS faculty and students (Patrick, [Stephany](https://stephanymadi.com), [Yifu](https://www.yifuzhang.xyz/), and [Defne](https://www.defnekaynak.com/)) in collaboration with [XXIX](http://www.xxix.co). <!--The [custom typeface](https://github.com/XXIX/mps-typeface) is open-source and can be contributed to by the MPS community.-->
