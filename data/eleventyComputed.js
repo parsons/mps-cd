@@ -6,14 +6,15 @@ const promoteIndex = ({ index, ...siblings } = {}) =>
 	)
 
 export default {
-	title: data => data.page.fileSlug // Use the folder name…
-		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
-		|| data.text.programTitle, // Fallback to program.
-
-	// Remodel/sort.
+	// Remodel/sort first.
 	students: ({ students }) =>
 		Object.entries(promoteIndex(students))
 			.map(([year, studentsByName]) => [year, Object.values(studentsByName)])
 			.sort(([a], [b]) => b - a), // Descending years.
 	text: ({ text }) => promoteIndex(text),
+
+	// Lower, to use the data.
+	title: data => data.page.fileSlug // Use the folder name…
+		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
+		|| data.text.programTitle, // Fallback to program.
 }
