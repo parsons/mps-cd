@@ -1,6 +1,6 @@
 <nav aria-labelledby="nav">
 	<h2 id="nav">
-		<a {%- if page.url == '/' %} aria-current="page"{% endif %} href="{{ '/' | url }}">{{ text.programTitle }} <em>{{ text.concentration }}</em></a>
+		<a {%- if page.url == '/' %} aria-current="page"{% endif %} href="{{ '/' | url }}">{{ text.school }} {{ text.program }} <em>{{ text.concentration }}</em></a>
 	</h2>
 	{% include 'pages.liquid' %}
 </nav>

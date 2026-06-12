@@ -16,5 +16,5 @@ export default {
 	// Lower, to use the data.
 	title: data => data.page.fileSlug // Use the folder name…
 		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
-		|| data.text.programTitle, // Fallback to program.
+		|| `${data.text.school} ${data.text.program}`, // Fallback to school/program.
 }
