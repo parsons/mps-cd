@@ -1,3 +1,10 @@
+// Recursively merge `index.js` up into its object (no extra key/level).
+const promoteIndex = ({ index, ...siblings } = {}) =>
+	Object.fromEntries(
+		Object.entries({ ...index, ...siblings })
+			.map(([key, value]) => [key, value && typeof value === 'object' ? promoteIndex(value) : value])
+	)
+
 export default {
 	// Some common strings.
 	school:        'Parsons',
@@ -15,10 +22,9 @@ export default {
 		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
 		|| data.programTitle, // Fallback to program.
 
-	// Remodel `students` object from folder structure, flattening the last level (info.js) out.
+	// Remodel/sort.
 	students: ({ students }) =>
-		Object.entries(students)
-			.map(([year, group]) => [year, Object.values(group).map(({ info }) => info)])
+		Object.entries(promoteIndex(students))
+			.map(([year, studentsByName]) => [year, Object.values(studentsByName)])
 			.sort(([a], [b]) => b - a) // Descending years.
-
 }
