@@ -18,11 +18,11 @@ const order = 1
 						<p>{{course.credits}} Credits</p>
 					</td>
 					<td>
-						<a href="{{ catalogUrl | append: course.number | remove: ' ' }}">{{course.title}}</a>
+						<a href="{{ links.catalog | append: course.number | remove: ' ' }}">{{course.title}}</a>
 					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 {% endfor %}
-<p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ catalogUrl }}">The New School’s Course Catalog</a>.</p>
+<p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ links.catalog }}">The New School’s Course Catalog</a>.</p>

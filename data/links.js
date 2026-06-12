@@ -1,0 +1,5 @@
+export default {
+	catalog:     'https://courses.newschool.edu/courses/',
+	apply:       'https://www.newschool.edu/parsons/how-to-apply-graduate/',
+	requestInfo: 'https://apply.newschool.edu/register/requestinfo',
+}
