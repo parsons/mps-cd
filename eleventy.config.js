@@ -1,4 +1,4 @@
-import { RenderPlugin } from "@11ty/eleventy"
+import markdownIt from 'markdown-it'
 import path from 'node:path'
 import yaml from 'js-yaml'
 
@@ -9,10 +9,19 @@ export default (eleventyConfig) => {
 	// More ergonomic data.
 	eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents))
 
-	// Access built-in rendering filters template-side.
-	eleventyConfig.addPlugin(RenderPlugin)
+	const markdown = markdownIt({
+		breaks:      true,
+		html:        true,
+		linkify:     true,
+		typographer: true,
+	})
 
-	// Override filter with relative URLs, for portability. (Using regular function for `this`.)
+	// Make it available in the templates. (Using regular function for `this`.)
+	eleventyConfig.addFilter('markdown', async function (content) {
+		return markdown.render(await this.liquid.parseAndRender(content, this.context.environments))
+	})
+
+	// Override filter with relative URLs, for portability.
 	eleventyConfig.addFilter('url', function (target) {
 		const result = path.relative(this.page.url, target) || '.'
 		return target.endsWith('/') ? `${result}/` : result

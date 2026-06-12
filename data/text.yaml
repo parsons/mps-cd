@@ -2,7 +2,7 @@ school:        Parsons
 program:       MPS Communication Design
 concentration: Digital Product Design
 
-landing: |
+intro: |
   # Designing for the Digital Age
 
   In an increasingly digital world, designers are often challenged to create technology-driven products and services for a variety of platforms and human needs. Parsons’ Master of Professional Studies in Communication Design (MPS CD) features a concentration in Digital Product Design, which offers you the cutting-edge conceptual design methods and technical skills you need to meet this growing marketplace demand.
@@ -17,11 +17,24 @@ landing: |
 
 curriculum:
   intro: |
-    # Curriculum
+    # {{ title }}
 
     The Master of Professional Studies is awarded for completion of 30 credits. Students must maintain a 3.0 cumulative grade point average and fulfill all requirements in a timely manner.
 
     The one-year curriculum requires full-time enrollment.
 
   outro: |
-    For a complete listing of courses and descriptions, including elective options, visit the [The New School’s Course Catalog]({{ catalog }}).
+    For a complete listing of courses and descriptions, including elective options, visit the [The New School’s Course Catalog]({{ links.catalog }}).
+
+faculty:
+  intro: |
+    # {{ title }}
+
+  visiting: |
+    ## Visiting Critics
+
+    In addition to our core faculty, the MPS Communication Design program hosts a variety of workshops, lectures, and reviews with a wide range of external critics.
+
+students:
+  intro: |
+    # {{ title }}

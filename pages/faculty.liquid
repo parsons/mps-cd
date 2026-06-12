@@ -2,7 +2,7 @@
 order: 2
 ---
 
-<h1>{{ title }}</h1>
+{{ text.faculty.intro | markdown }}
 {% assign currentFaculty = faculty | where: 'current' %}
 {% render 'people.liquid', people: currentFaculty %}
 <details>
@@ -10,6 +10,5 @@ order: 2
 	{% assign previousFaculty = faculty | reject: 'current' %}
 	{% render 'people.liquid', people: previousFaculty %}
 </details>
-<h2>Visiting Critics</h2>
-<p>In addition to our core faculty, the MPS Communication Design program hosts a variety of workshops, lectures, and reviews with a wide range of external critics.</p>
+{{ text.faculty.visiting | markdown }}
 {% render 'people.liquid', people: guests %}

@@ -2,9 +2,8 @@
 order: 1
 ---
 
-{{ text.curriculum.intro | renderContent: 'md' }}
+{{ text.curriculum.intro | markdown }}
 {% for semester in curriculum %}
-	{% comment %} Uses the key itself. {% endcomment %}
 	<h2>{{ semester.first | capitalize }} semester</h2>
 	<table>
 		<tbody>
@@ -24,5 +23,4 @@ order: 1
 		</tbody>
 	</table>
 {% endfor %}
-{% comment %} Pass the links directly; global data not available in `render` (see #1541). {% endcomment %}
-{{ text.curriculum.outro | renderContent: 'liquid,md', links }}
+{{ text.curriculum.outro | markdown }}
