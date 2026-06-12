@@ -6,25 +6,19 @@ const promoteIndex = ({ index, ...siblings } = {}) =>
 	)
 
 export default {
-	// Some common strings.
-	school:        'Parsons',
-	program:       'MPS Communication Design',
-	concentration: 'Digital Product Design',
-
 	// URLs.
 	catalogUrl:     'https://courses.newschool.edu/courses/',
 	applyUrl:       'https://www.newschool.edu/parsons/how-to-apply-graduate/',
 	infoRequestUrl: 'https://apply.newschool.edu/register/requestinfo',
 
-	// Derived data.
-	programTitle: data => `${data.school} ${data.program}`,
 	title: data => data.page.fileSlug // Use the folder name…
 		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
-		|| data.programTitle, // Fallback to program.
+		|| data.text.programTitle, // Fallback to program.
 
 	// Remodel/sort.
 	students: ({ students }) =>
 		Object.entries(promoteIndex(students))
 			.map(([year, studentsByName]) => [year, Object.values(studentsByName)])
-			.sort(([a], [b]) => b - a) // Descending years.
+			.sort(([a], [b]) => b - a), // Descending years.
+	text: ({ text }) => promoteIndex(text),
 }

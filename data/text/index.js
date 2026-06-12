@@ -1,0 +1,7 @@
+// Some common strings.
+export default {
+	school:        'Parsons',
+	program:       'MPS Communication Design',
+	concentration: 'Digital Product Design',
+	programTitle:  'Parsons MPS Communication Design',
+}
