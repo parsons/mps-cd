@@ -1,5 +1,0 @@
-export default {
-	first: 'Ziwei',
-	last:  'Xing',
-	url:   'https://ziweixing97.github.io/Portfolio',
-}

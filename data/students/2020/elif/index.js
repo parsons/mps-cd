@@ -1,5 +1,0 @@
-export default {
-	first: 'Elif',
-	last:  'Karakose',
-	url:   'https://www.elifkarakose.com',
-}

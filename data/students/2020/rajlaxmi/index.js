@@ -1,5 +1,0 @@
-export default {
-	first: 'Rajlaxmi',
-	last:  'Jain',
-	url:   'https://www.rajlaxmijain.com',
-}

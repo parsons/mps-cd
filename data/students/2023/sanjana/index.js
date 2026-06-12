@@ -1,5 +1,0 @@
-export default {
-	first: 'Sanjana',
-	last:  'Mohan',
-	url:   'https://www.sanjanamohan.com',
-}

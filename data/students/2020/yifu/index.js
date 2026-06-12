@@ -1,5 +1,0 @@
-export default {
-	first: 'Yifu',
-	last:  'Zhang',
-	url:   'https://yifuzhang.xyz',
-}
