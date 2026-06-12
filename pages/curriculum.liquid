@@ -2,10 +2,9 @@
 order: 1
 ---
 
-<h1>{{ title }}</h1>
-<p>The Master of Professional Studies is awarded for completion of 30 credits. Students must maintain a 3.0 cumulative grade point average and fulfill all requirements in a timely manner.</p>
-<p>The one-year curriculum requires full-time enrollment.</p>
+{{ text.curriculum.intro | renderContent: 'md' }}
 {% for semester in curriculum %}
+	{% comment %} Uses the key itself. {% endcomment %}
 	<h2>{{ semester.first | capitalize }} semester</h2>
 	<table>
 		<tbody>
@@ -13,16 +12,17 @@ order: 1
 				<tr>
 					<td>
 						{%- if course.number %}
-							<p>{{course.number}}</p>
+							<p>{{ course.number }}</p>
 						{% endif %}
-						<p>{{course.credits}} Credits</p>
+						<p>{{ course.credits }} Credits</p>
 					</td>
 					<td>
-						<a href="{{ links.catalog | append: course.number | remove: ' ' }}">{{course.title}}</a>
+						<a href="{{ links.catalog | append: course.number | remove: ' ' }}">{{ course.title }}</a>
 					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 {% endfor %}
-<p>For a complete listing of courses and descriptions, including elective options, visit the <a href="{{ links.catalog }}">The New School’s Course Catalog</a>.</p>
+{% comment %} Pass the links directly; global data not available in `render` (see #1541). {% endcomment %}
+{{ text.curriculum.outro | renderContent: 'liquid,md', links }}
