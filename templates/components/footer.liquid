@@ -2,4 +2,10 @@
 	<nav>
 		{% include 'pages.liquid' %}
 	</nav>
+	{% for section in text.footer.section %}
+		<section>
+			<h2>{{ section.title }}</h2>
+			{{ section.blurb | markdown }}
+		</section>
+	{% endfor %}
 </footer>
