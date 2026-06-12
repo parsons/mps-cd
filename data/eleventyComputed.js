@@ -1,4 +1,4 @@
-// Recursively merge `index.js` up into its object (no extra key/level).
+// Recursively merge index data files up into their object (no extra key/level).
 const promoteIndex = ({ index, ...siblings } = {}) =>
 	Object.fromEntries(
 		Object.entries({ ...index, ...siblings })
