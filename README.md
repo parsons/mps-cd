@@ -17,7 +17,7 @@ You will need `pnpm` [on your machine](https://pnpm.io/installation). Then run 
 
 For local development, `pnpm serve` will build/serve Eleventy’s `_site` output right at `http://localhost/`.
 
-For “production” deployment, the site is automatically [built/served on GitHub Pages](https://parsons.github.io/mps-cd/), via [an action/workflow](.github/workflows/build-deploy.yml) when there are changes pushed to `main`.
+For “production” deployment, the site is automatically [built/served on GitHub Pages](https://parsons.github.io/mps-cd/), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are changes pushed to `main`.
 
 <br>
 
