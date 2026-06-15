@@ -9,7 +9,9 @@ const promoteIndex = ({ index, ...siblings } = {}) =>
 
 // Make list of per-student image files.
 const imagesFor = (year, name) =>
-	readdirSync(`data/students/${year}/${name}`).filter(file => /\.(avif|gif|jpe?g|png|svg|webp)$/i.test(file))
+	readdirSync(`data/students/${year}/${name}`)
+		.filter(file => /\.(avif|gif|jpe?g|png|svg|webp)$/i.test(file))
+		.map(file => `data/students/${year}/${name}/${file}`)
 
 export default {
 	title: data => data.page.fileSlug // Use the folder name…
