@@ -1,3 +1,7 @@
 first: Dusha
 last:  Castro
 url:   http://dushacastro.com
+project:
+  title: Sundali Day Calculator
+  description: |
+    Simple, Filipino-inspired day calculator

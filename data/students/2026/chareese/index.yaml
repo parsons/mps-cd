@@ -1,3 +1,8 @@
 first: Chareese
 last:  Lam
 url:   https://chareeselam.com
+project:
+  title: Parameter
+  url:   https://www.chareeselam.com/parameter
+  description: |
+    Parameter is a patient-facing genetic health app designed to reduce fragmentation across personal health data. It brings together daily health metrics, medical reports, and genetic information into one organized experience, helping users move away from disconnected tools and isolated records. Instead of simply showing numbers, Parameter uses AI-powered insights to reveal patterns over time, explain what results mean in clearer language, and support a more informed understanding of personal health. The goal is to make complex health information feel more connected, accessible, and useful for everyday decision-making.

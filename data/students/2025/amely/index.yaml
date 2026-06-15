@@ -1,3 +1,11 @@
 first: Amely
 last:  Richter
 url:   https://amelyrichter.com
+project:
+  title: 'Must-See: End Exhibition FOMO'
+  description: |
+    Must-See: End Exhibition FOMO is a digital tool designed to enhance the way users engage with exhibitions. It allows users to save exhibitions directly from museum websites, creating a personalized archive of must-see shows. The tool also provides tailored recommendations based on saved exhibitions and includes a countdown feature to ensure users never miss an event.
+    
+    Keeping track of exhibitions across multiple museums can be overwhelming, often resulting in missed opportunities. While many museums offer newsletters or event calendars, there’s no centralized way for visitors to save, organize, and receive reminders about exhibitions they’re interested in.
+    
+    End Exhibition FOMO solves this by offering a seamless way to bookmark exhibitions while browsing museum websites. By analyzing user preferences, it suggests relevant upcoming shows, making discovery effortless. The built-in countdown feature keeps users informed about approaching exhibition end dates, helping them plan visits in advance. This way art lovers can stay connected to the cultural world without the hassle of scattered notes and forgotten dates.

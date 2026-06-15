@@ -1,3 +1,11 @@
 first: Cristina Miquel
 last:  Garrido
 url:   www.cristinamiquel.com
+project:
+  title: KOACH.
+  description: |
+    "KOACH. is a platform for basketball coaches to easily manage their teams, and make data-driven decisions that improve their results.
+    
+    This project was an end-to-end UX/UI project that started off with a personal interest in sports and went through phases of descovery and market research, low-fi and mid-fi prototyping and high-fi and branding definition.
+    
+    The result is KOACH, which adapts to the specific needs coaches have in the Spanish market and that leaves a potential expansion roadmap to other sports and disciplines."

@@ -1,3 +1,7 @@
 first: Sandra
 last:  Qin
 url:   http://sandraqin.com
+project:
+  title: Whale
+  description: |
+    "Whale" is an app specifically designed to help people with social anxiety. It customizes its features for user by playing audio content they enjoy, it also provides tasks that shift their focus to the outside world, distracting them during anxiety attacks. By utilizing the Apple product suite, users can effortlessly monitor their heart rate by Apple Watch, enjoy audio through AirPods, and complete tasks through the app or live events on iPhone.

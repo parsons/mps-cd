@@ -1,3 +1,7 @@
 first: Shivi
 last:  Ravisankar
 url:   https://shiviravisankar.com
+project:
+  title: Aperitivo
+  description: |
+    An app that allows you to explore and discover new cocktail recipes using your favourite summer spirits. It is created using a crowd-sourced API that offers a wide range of cocktails, which are regularly updated.

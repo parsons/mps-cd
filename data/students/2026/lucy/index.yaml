@@ -1,3 +1,8 @@
 first: Lucy
 last:  Trepanier
 url:   https://lucytrep.com
+project:
+  title: Axsphere
+  url:   https://lucytrep.com/axsphere
+  description: |
+    Axsphere helps people show up with confidence by rethinking how people choose where to go. Research revealed a clear gap that accessibility information is often invisible, unverified, or too vague to be useful. Axsphere closes that gap by letting users filter spaces by atmosphere and accessibility needs, preview real conditions before arriving, and contribute live crowd and noise data for others. Features like text-to-speech, alt text, colorblind-friendly visuals, and adjustable audio controls make the experience comfortable for everyone.

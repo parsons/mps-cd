@@ -1,3 +1,7 @@
 first: Madhura
 last:  Sekar
 url:   https://www.madhurasekar.com
+project:
+  title: HoneyBee
+  description: |
+    Your kitchen sidekick, reducing waste with recipe suggestions & expiration tracking

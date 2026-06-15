@@ -1,3 +1,7 @@
 first: Jolyn
 last:  Tran
 url:   https://jolyntran.com
+project:
+  title: “Party Play” Feature for Pokémon Go
+  description: |
+    As Pokémon Go evolved, coordinating in-person gameplay became challenging, diminishing its social appeal. To address this, I designed a Party Play scheduling feature that helps players plan group activities around Community Events, fostering real-world connections and improving retention.

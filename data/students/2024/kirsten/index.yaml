@@ -1,3 +1,7 @@
 first: Kirsten
 last:  Geiger
 url:   https://kirstengeigerdesign.com
+project:
+  title: Spot Me
+  description: |
+    Spot Me is a fitness training tool that digitally assists weightlifters by utilizing body scanning and visual feedback to correct their form. The app aims to not only prevent injury but also optimize each workout, so that you can keep the focus on lifting at your personal best.
