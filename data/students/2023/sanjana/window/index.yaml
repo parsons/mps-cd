@@ -1,0 +1,3 @@
+title: Window Sight
+description: |
+  This tool allows the user to pick a flight based on the flight number and the airports it's flying from and to. Based on the selection, the tool tells you which side of the plane one must sit on and not just that, additionally, it also shows you the view you will see if you choose to sit on this side.

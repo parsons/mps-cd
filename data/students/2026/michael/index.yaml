@@ -1,9 +1,3 @@
 first: Michael
 last:  French
 url:   https://michaelfrench.co
-
-project:
-  title: GutCheck
-  url:   https://github.com/mfrench022/functions
-  description: |
-    GutCheck is an extension for Google Chrome that is inserted directly into the Amazon interface. As such, many of the styles are pulled directly from Amazon, or modified slightly to fit the extension's design system. This includes the extension's typeface, Amazon Ember, icons, and colors. The project has three main files. The CSS file modifies Amazon's styles and creates any new styles needed for the extension. The Javascript file contains the core functionality of the extension. The JSON file contains the setup information for the Chrome Extension.
