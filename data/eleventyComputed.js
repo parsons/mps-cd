@@ -23,10 +23,10 @@ export default {
 		Object.entries(promoteIndex(students))
 			.map(([year, studentsByName]) => [
 				year,
-				Object.entries(studentsByName).map(([name, student]) => ({
-					...student,
-					project: { ...student.project, images: imagesFor(year, name) } // Add list of images.
-				}))
+				Object.entries(studentsByName).map(([name, student]) => {
+					const images = imagesFor(year, name)
+					return images.length ? { ...student, project: { ...student.project, images } } : student // Add list of images, if there are any.
+				})
 			])
 			.sort(([a], [b]) => b - a), // Descending years.
 
