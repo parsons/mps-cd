@@ -29,4 +29,10 @@ export default {
 				}))
 			])
 			.sort(([a], [b]) => b - a), // Descending years.
+
+	// Print the data-cascade for debuggin’
+	// _debug: data => {
+	// 	if (data.page.url === '/') console.dir(data, { depth: null })
+	// 	return null
+	// }
 }
