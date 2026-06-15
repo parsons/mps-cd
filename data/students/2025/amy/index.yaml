@@ -1,6 +1,7 @@
 first: Amy
 last:  Lewis
 url:   https://www.amy-lewis.com
+
 project:
   title: “Jukebox” Feature for Spotify
   description: |
