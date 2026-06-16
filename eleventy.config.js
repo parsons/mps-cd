@@ -1,3 +1,4 @@
+import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
 import yaml from 'js-yaml'
@@ -25,6 +26,20 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('url', function (target) {
 		const result = path.relative(this.page.url, target) || '.'
 		return target.endsWith('/') ? `${result}/` : result
+	})
+
+	// Resize images.
+	eleventyConfig.addAsyncShortcode('lowresImg', async (src, alt = '') => {
+		const metadata = await Image(src, {
+			widths: [40],
+			formats: ['webp'],
+			outputDir: './_site/img/',
+			urlPath: '/img/'
+		})
+
+		const { url, width, height } = metadata.webp[0] // smallest/only entry
+
+		return `<img alt="${alt}" decoding="async" height="${height}" loading="lazy" src="${url}" width="${width}">`
 	})
 
 	return {

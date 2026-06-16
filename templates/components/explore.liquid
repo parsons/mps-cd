@@ -18,6 +18,11 @@
 								{{ project.description | markdown }}
 							</section>
 						{% endif %}
+						<figure>
+							{% for image in project.images %}
+								{% lowresImg image project.title %}
+							{% endfor %}
+						</figure>
 					</li>
 				{% endfor %}
 			</ul>
