@@ -9,10 +9,12 @@
 		<title>{{ title }}</title>
 	</head>
 	<body>
-		{% include 'nav.liquid' %}
 		<main>
-			{{ content }}
+			{% include 'nav.liquid' %}
+			<article>
+				{{ content }}
+			</article>
+			{% include 'footer.liquid' %}
 		</main>
-		{% include 'footer.liquid' %}
 	</body>
 </html>

@@ -4,6 +4,8 @@ order: 3
 
 {{ text.students.intro | markdown }}
 {% for cohort in students %}
-	<h2>{{ cohort.year }}</h2>
-	{% render 'people.liquid', people: cohort.students %}
+	<section>
+		<h2>{{ cohort.year }}</h2>
+		{% render 'people.liquid', people: cohort.students %}
+	</section>
 {% endfor %}
