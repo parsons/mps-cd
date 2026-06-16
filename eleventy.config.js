@@ -38,9 +38,10 @@ export default (eleventyConfig) => {
 
 	// Resize images.
 	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, size) {
-		// Make sure the output directory exists!
-		const outputDir = path.join(this.eleventy.directories.output, 'img')
+		const urlPath = '/assets/'
+		const outputDir = path.join(this.eleventy.directories.output, urlPath)
 
+		// Make sure the output directory exists!
 		fs.mkdirSync(outputDir, { recursive: true })
 
 		// `eleventy-img` sizes by width only, so get the intrinsic.
@@ -57,10 +58,10 @@ export default (eleventyConfig) => {
 			widths: [target],
 			formats: ['webp'],
 			outputDir,
-			urlPath: '/assets/'
+			urlPath,
 		})).webp[0]
 
-		return `<img alt="" decoding="async" height="${height}" loading="lazy" src="${toRelative(this.page.url, url)}" width="${width}">`
+		return `<img alt="" decoding="async" height="${ height }" loading="lazy" src="${ toRelative(this.page.url, url) }" width="${ width }">`
 	})
 
 	return {
