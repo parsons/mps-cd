@@ -3,7 +3,7 @@ order: 3
 ---
 
 {{ text.students.intro | markdown }}
-{% for year in students %}
-	<h2>{{ year.first }}</h2>
-	{% render 'people.liquid', people: year.last %}
+{% for cohort in students %}
+	<h2>{{ cohort.year }}</h2>
+	{% render 'people.liquid', people: cohort.students %}
 {% endfor %}

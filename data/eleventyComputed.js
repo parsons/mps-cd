@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 
 // Recursively merge index data files up into their object (no extra key/level).
 const promoteIndex = ({ index, ...siblings } = {}) =>
@@ -7,28 +7,41 @@ const promoteIndex = ({ index, ...siblings } = {}) =>
 			.map(([key, value]) => [key, value && typeof value === 'object' ? promoteIndex(value) : value])
 	)
 
-// Make list of per-student image files.
-const imagesFor = (year, name) =>
-	readdirSync(`data/students/${year}/${name}`)
-		.filter(file => /\.(gif|jpe?g|png|webp)$/i.test(file))
-		.map(file => `data/students/${year}/${name}/${file}`)
+// Add projects and their images from subfolders, if they have them.
+const addProjects = (year, name, student) => {
+	const isProject = value => value && typeof value === 'object' // Only works if there aren’t other objects!
+
+	const imageExtension = /\.(gif|jpe?g|png|webp)$/i
+
+	const entries = Object.entries(student)
+	const keys = Object.fromEntries(entries.filter(([, value]) => !isProject(value)))
+
+	const projects = entries
+		.filter(([, value]) => isProject(value))
+		.map(([slug, project]) => {
+			const path = `data/students/${year}/${name}/${slug}`
+			const images = (existsSync(path) ? readdirSync(path) : [])
+				.filter(file => imageExtension.test(file)).map(file => `${path}/${file}`)
+
+			return { ...project, ...(images.length && { images }) }
+		})
+
+	return projects.length ? { ...keys, projects } : keys
+}
 
 export default {
 	title: data => data.page.fileSlug // Use the folder name…
 		.replace(/^./, initial => initial.toUpperCase()) // …capitalized.
 		|| `${data.text.school} ${data.text.program}`, // Fallback to school/program.
 
-	// Remodel/get images/sort.
+	// Sort, remodel.
 	students: ({ students }) =>
 		Object.entries(promoteIndex(students))
-			.map(([year, studentsByName]) => [
+			.sort(([a], [b]) => b - a) // Descending years.
+			.map(([year, byName]) => ({
 				year,
-				Object.entries(studentsByName).map(([name, student]) => {
-					const images = imagesFor(year, name)
-					return images.length ? { ...student, project: { ...student.project, images } } : student // Add list of images, if there are any.
-				})
-			])
-			.sort(([a], [b]) => b - a), // Descending years.
+				students: Object.entries(byName).map(([name, student]) => addProjects(year, name, student))
+			})),
 
 	// Print the data-cascade for debuggin’
 	// _debug: data => {
