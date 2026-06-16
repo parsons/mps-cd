@@ -1,0 +1,9 @@
+<aside>
+	<h2>{{  text.explore.heading }}</h2>
+	{% for cohort in students %}
+		<details {%- if forloop.first %} open{% endif %}>
+			<summary>{{ cohort.year }}</summary>
+			<p>Hello, world</p>
+		</details>
+	{% endfor %}
+</aside>
