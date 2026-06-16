@@ -1,7 +1,15 @@
+import fs from 'node:fs'
 import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
 import yaml from 'js-yaml'
+
+// Relative URL helper.
+const toRelative = (from, target) => {
+	const result = path.relative(from, target) || '.'
+
+	return target.endsWith('/') ? `${result}/` : result
+}
 
 export default (eleventyConfig) => {
 	// Set common base layout for everything.
@@ -24,22 +32,24 @@ export default (eleventyConfig) => {
 
 	// Override filter with relative URLs, for portability.
 	eleventyConfig.addFilter('url', function (target) {
-		const result = path.relative(this.page.url, target) || '.'
-		return target.endsWith('/') ? `${result}/` : result
+		return toRelative(this.page.url, target)
 	})
 
 	// Resize images.
-	eleventyConfig.addAsyncShortcode('lowresImg', async (src, alt = '') => {
+	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, alt = '', width = 40) {
+		const outputDir = path.join(this.eleventy.directories.output, 'img')
+		fs.mkdirSync(outputDir, { recursive: true })
+
 		const metadata = await Image(src, {
-			widths: [40],
+			widths: [width],
 			formats: ['webp'],
-			outputDir: './_site/img/',
+			outputDir,
 			urlPath: '/img/'
 		})
 
-		const { url, width, height } = metadata.webp[0] // smallest/only entry
+		const { url, width: w, height } = metadata.webp[0]
 
-		return `<img alt="${alt}" decoding="async" height="${height}" loading="lazy" src="${url}" width="${width}">`
+		return `<img alt="${alt}" decoding="async" height="${height}" loading="lazy" src="${toRelative(this.page.url, url)}" width="${w}">`
 	})
 
 	return {

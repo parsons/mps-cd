@@ -20,7 +20,7 @@
 						{% endif %}
 						<figure>
 							{% for image in project.images %}
-								{% lowresImg image project.title %}
+								{% resizedImg image project.title %}
 							{% endfor %}
 						</figure>
 					</li>
