@@ -1,6 +1,7 @@
 {
 	"dependencies": {
 		"@11ty/eleventy": "4.0.0-alpha.7",
+		"@11ty/eleventy-img": "^6.0.4",
 		"js-yaml": "^4.2.0",
 		"markdown-it": "^14.2.0"
 	},
@@ -13,7 +14,7 @@
 	},
 	"packageManager": "pnpm@11.5.0",
 	"scripts": {
-		"clean": "node -e \"import('fs').then(fs => fs.rmSync('_site', { recursive: true, force: true }))\"",
+		"clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\"",
 		"build": "pnpm clean && eleventy",
 		"serve": "pnpm clean && eleventy --serve --port=80 --incremental"
 	},
