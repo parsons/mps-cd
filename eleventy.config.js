@@ -48,12 +48,14 @@ export default (eleventyConfig) => {
 		const { width: srcWidth, height: srcHeight } = await sharp(src).metadata()
 
 		const target = size
-			? Math.round(srcHeight > srcWidth
-				? size * srcWidth / srcHeight // Portrait.
-				: size) // Landscape/square.
+			? Math.round(
+				(srcHeight > srcWidth
+					? size * srcWidth / srcHeight // Portrait.
+					: size // Landscape/square.
+				) * 2) // 2× for display density.
 			: null // No size, use original.
 
-		// Generate the single webp and pull its real output dimensions.
+		// Generate the single `.webp` and pull its real output dimensions.
 		const { url, width, height } = (await Image(src, {
 			widths: [target],
 			formats: ['webp'],
@@ -61,7 +63,7 @@ export default (eleventyConfig) => {
 			urlPath,
 		})).webp[0]
 
-		return `<img alt="" decoding="async" height="${ height }" loading="lazy" src="${ toRelative(this.page.url, url) }" width="${ width }">`
+		return `<img alt="" decoding="async" height="${ height / 2 }" loading="lazy" src="${ toRelative(this.page.url, url) }" width="${ width / 2 }">`
 	})
 
 	return {
