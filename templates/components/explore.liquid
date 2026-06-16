@@ -1,9 +1,26 @@
 <aside>
 	<h2>{{  text.explore.heading }}</h2>
-	{% for cohort in students %}
+	{% for cohort in projects %}
 		<details {%- if forloop.first %} open{% endif %}>
 			<summary>{{ cohort.year }}</summary>
-			<p>Hello, world</p>
+			<ul>
+				{% assign sorted = cohort.projects | sort_natural: 'title' %}
+				{% for project in sorted %}
+					<li>
+						<hgroup>
+							<a {%- if project.url %} href="{{ project.url }}" {% endif %}><h3>{{ project.title }}</h3></a>
+							<a {%- if project.student.url %} href="{{ project.student.url }}" {% endif %}>
+								<address>{{ project.student.first }} {{ project.student.last }}</address>
+							</a>
+						</hgroup>
+						{% if project.description %}
+							<section>
+								{{ project.description | markdown }}
+							</section>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
 		</details>
 	{% endfor %}
 </aside>

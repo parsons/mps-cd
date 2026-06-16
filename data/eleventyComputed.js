@@ -43,6 +43,15 @@ export default {
 				students: Object.entries(byName).map(([name, student]) => addProjects(year, name, student))
 			})),
 
+	// Projects by year.
+	projects: ({ students }) =>
+		students.map(({ year, students: people }) => ({
+			year,
+			projects: people.flatMap(({ projects, ...student }) =>
+				(projects ?? []).map(project => ({ ...project, student })) // Project as parent, student child.
+			)
+		})),
+
 	// Print the data-cascade for debuggin’
 	// _debug: data => {
 	// 	if (data.page.url === '/') console.dir(data, { depth: null })
