@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
+import sharp from 'sharp'
 import yaml from 'js-yaml'
 
 // Relative URL helper.
@@ -36,20 +37,30 @@ export default (eleventyConfig) => {
 	})
 
 	// Resize images.
-	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, alt = '', width = 40) {
+	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, size) {
+		// Make sure the output directory exists!
 		const outputDir = path.join(this.eleventy.directories.output, 'img')
+
 		fs.mkdirSync(outputDir, { recursive: true })
 
-		const metadata = await Image(src, {
-			widths: [width],
+		// `eleventy-img` sizes by width only, so get the intrinsic.
+		const { width: srcWidth, height: srcHeight } = await sharp(src).metadata()
+
+		const target = size
+			? Math.round(srcHeight > srcWidth
+				? size * srcWidth / srcHeight // Portrait.
+				: size) // Landscape/square.
+			: null // No size, use original.
+
+		// Generate the single webp and pull its real output dimensions.
+		const { url, width, height } = (await Image(src, {
+			widths: [target],
 			formats: ['webp'],
 			outputDir,
-			urlPath: '/img/'
-		})
+			urlPath: '/assets/'
+		})).webp[0]
 
-		const { url, width: w, height } = metadata.webp[0]
-
-		return `<img alt="${alt}" decoding="async" height="${height}" loading="lazy" src="${toRelative(this.page.url, url)}" width="${w}">`
+		return `<img alt="" decoding="async" height="${height}" loading="lazy" src="${toRelative(this.page.url, url)}" width="${width}">`
 	})
 
 	return {

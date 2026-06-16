@@ -3,7 +3,8 @@
 		"@11ty/eleventy": "4.0.0-alpha.7",
 		"@11ty/eleventy-img": "^6.0.4",
 		"js-yaml": "^4.2.0",
-		"markdown-it": "^14.2.0"
+		"markdown-it": "^14.2.0",
+		"sharp": "^0.35.1"
 	},
 	"devEngines": {
 		"runtime": {
