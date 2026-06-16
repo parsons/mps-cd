@@ -12,6 +12,9 @@ const toRelative = (from, target) => {
 	return target.endsWith('/') ? `${result}/` : result
 }
 
+// Cache for faster local serving.
+const outputDir = '.cache/'
+
 export default (eleventyConfig) => {
 	// Set common base layout for everything.
 	eleventyConfig.addGlobalData('layout', 'base.liquid')
@@ -39,10 +42,6 @@ export default (eleventyConfig) => {
 	// Resize images.
 	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, size) {
 		const urlPath = '/assets/'
-		const outputDir = path.join(this.eleventy.directories.output, urlPath)
-
-		// Make sure the output directory exists!
-		fs.mkdirSync(outputDir, { recursive: true })
 
 		// `eleventy-img` sizes by width only, so get the intrinsic.
 		const { width: srcWidth, height: srcHeight } = await sharp(src).metadata()
@@ -55,7 +54,7 @@ export default (eleventyConfig) => {
 				) * 2) // 2× for display density.
 			: null // No size, use original.
 
-		// Generate the single `.webp` and pull its real output dimensions.
+		// Generate `.webp` into the persistent cache; reused across builds when unchanged.
 		const { url, width, height } = (await Image(src, {
 			widths: [target],
 			formats: ['webp'],
@@ -64,6 +63,11 @@ export default (eleventyConfig) => {
 		})).webp[0]
 
 		return `<img alt="" decoding="async" height="${ height / 2 }" loading="lazy" src="${ toRelative(this.page.url, url) }" width="${ width / 2 }">`
+	})
+
+	// Copy cached images into the real output after each build.
+	eleventyConfig.on('eleventy.after', () => {
+		fs.cpSync(outputDir, path.join(eleventyConfig.directories.output, 'assets'), { recursive: true })
 	})
 
 	return {
