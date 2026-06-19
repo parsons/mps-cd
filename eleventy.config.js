@@ -1,8 +1,8 @@
+import { imageDimensionsFromStream } from 'image-dimensions'
 import fs from 'node:fs'
 import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
-import sharp from 'sharp'
 import yaml from 'js-yaml'
 
 // Relative URL helper.
@@ -44,7 +44,8 @@ export default (eleventyConfig) => {
 		const urlPath = '/assets/'
 
 		// `eleventy-img` sizes by width only, so get the intrinsic.
-		const { width: srcWidth, height: srcHeight } = await sharp(src).metadata()
+		const { width: srcWidth, height: srcHeight } =
+			await imageDimensionsFromStream(ReadableStream.from(fs.createReadStream(src)))
 
 		const target = size
 			? Math.round(

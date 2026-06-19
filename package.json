@@ -2,9 +2,9 @@
 	"dependencies": {
 		"@11ty/eleventy": "4.0.0-alpha.7",
 		"@11ty/eleventy-img": "^6.0.4",
+		"image-dimensions": "^2.5.1",
 		"js-yaml": "^4.2.0",
-		"markdown-it": "^14.2.0",
-		"sharp": "^0.35.1"
+		"markdown-it": "^14.2.0"
 	},
 	"devEngines": {
 		"runtime": {
@@ -19,5 +19,6 @@
 		"build": "pnpm clean && eleventy",
 		"serve": "pnpm clean && eleventy --serve --port=80 --incremental"
 	},
-	"type": "module"
+	"type": "module",
+	"devDependencies": {}
 }
