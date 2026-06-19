@@ -23,6 +23,12 @@ For “production” deployment, the site is automatically [built/served on GitH
 
 <br>
 
+## Use and Re-use
+
+This repo is made public ([“source available”](https://en.wikipedia.org/wiki/Source-available_software)) for personal and educational, non-commercial use, under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). Such as one might consider this “software,” it’s provided as-is and without any warranty. You’ve got this!
+
+The [student work](data/students/) is shown under [CC BY-NC-ND 4.0 license](http://creativecommons.org/licenses/by-nc-nd/4.0/), and all their respective rights are reserved.
+
 ## Questions
 
 This iteration was put together by [@mfehrenbach](https://github.com/mfehrenbach), if anything else comes up!
