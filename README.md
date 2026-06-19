@@ -1,6 +1,8 @@
 > [!NOTE]
 > This is an in-progress, ground-up rebuild of the [previous MPS CD site](https://github.com/parsons/mpscd.parsons.edu), for reasons of simplicity, flexibility, and longevity. More to come!
 
+<br>
+
 # MPS CD
 
 This is the program site for [Parsons’ Master of Professional Studies in Communication Design (MPS CD)](https://www.newschool.edu/parsons/mps-communication-design/).
@@ -29,7 +31,7 @@ For “production” deployment, the site is automatically [built/served on GitH
 
 ## Use and Re-use
 
-This repo is made public (“[*source available*](https://en.wikipedia.org/wiki/Source-available_software)”) for personal and educational, non-commercial use, under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). Such as one might consider this “software,” it’s provided as-is and without any warranty. You’ve got this!
+This repo is made <kbd>Public</kbd> (&thinsp;[*“source available”*](https://en.wikipedia.org/wiki/Source-available_software)&thinsp;) for personal and educational, non-commercial use, under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). Such as one might consider this “software,” it’s provided as-is and without any warranty. You’ve got this!
 
 The [student work](data/students/) is shown under the [CC BY-NC-ND 4.0 license](http://creativecommons.org/licenses/by-nc-nd/4.0/), and all their respective rights are reserved.
 
