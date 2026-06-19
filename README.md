@@ -9,7 +9,7 @@ This version is built in [Eleventy](https://www.11ty.dev).
 
 Our content is fully abstracted and separated into the [`data` folder](data/), organized in [YAML files](https://www.11ty.dev/docs/data-custom/#yaml) (over JSON) for commenting and syntax forgiveness. Original/high-res project images are included here too, for simplicity—they are then resized, as needed, on build.
 
-Pulling from this, our [pages](pages/) are strung together with 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/) generating good, old-fashioned HTML. There is only plain/native CSS and vanilla JavaScript on top of that—no Sass, no pipeline, no framework, no fuss.
+Pulling from this, our [pages](pages/) are strung together with 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/) generating good, old-fashioned HTML. ~~There is only plain/native CSS and vanilla JavaScript on top of that—no Sass, no pipeline, no framework, no fuss.~~ *To come!*
 
 You will need `pnpm` [on your machine](https://pnpm.io/installation). Then run `pnpm install` once to grab our handful of [build dependencies](package.json).
 
