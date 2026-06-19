@@ -52,9 +52,6 @@ export default {
 			)
 		})),
 
-	// Print the data-cascade for debuggin’
-	// _debug: data => {
-	// 	if (data.page.url === '/') console.dir(data, { depth: null })
-	// 	return null
-	// }
+	// Print the data-cascade (once) for debuggin’.
+	// _debug: data => (data.page.url === '/' && console.dir(data, { depth: 0 }), null)
 }
