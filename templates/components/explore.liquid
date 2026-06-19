@@ -1,5 +1,5 @@
 <aside>
-	<h2>{{  text.explore.heading }}</h2>
+	<h2>{{ text.explore.heading }}</h2>
 	{% for cohort in projects %}
 		<details {%- if forloop.first %} open{% endif %}>
 			<summary>{{ cohort.year }}</summary>
@@ -8,10 +8,16 @@
 				{% for project in sorted %}
 					<li>
 						<hgroup>
-							<a {%- if project.url %} href="{{ project.url }}" {% endif %}><h3>{{ project.title }}</h3></a>
-							<a {%- if project.student.url %} href="{{ project.student.url }}" {% endif %}>
-								<address>{{ project.student.first }} {{ project.student.last }}</address>
-							</a>
+							<h3>
+								<a {%- if project.url %} href="{{ project.url }}"{% endif %}>
+									{{- project.title -}}
+								</a>
+							</h3>
+							<address>
+								<a {%- if project.student.url %} href="{{ project.student.url }}"{% endif %}>
+									{{- project.student.first }} {{ project.student.last -}}
+								</a>
+							</address>
 						</hgroup>
 						{% if project.description %}
 							<section>

@@ -2,7 +2,11 @@
 	{% assign sorted = people | sort_natural: 'last' %}
 	{% for person in sorted %}
 		<li>
-			<a {%- if person.url %} href="{{ person.url }}" {% endif %}>{{ person.first }} {{ person.last }}</a>
+			<address>
+				<a {%- if person.url %} href="{{ person.url }}" {% endif %}>
+					{{- person.first }} {{ person.last -}}
+				</a>
+			</address>
 		</li>
 	{% endfor %}
 </ul>
