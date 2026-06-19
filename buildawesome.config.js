@@ -15,12 +15,12 @@ const toRelative = (from, target) => {
 // Cache for faster local serving.
 const outputDir = '.cache/'
 
-export default (eleventyConfig) => {
+export default config => {
 	// Set common base layout for everything.
-	eleventyConfig.addGlobalData('layout', 'base.liquid')
+	config.addGlobalData('layout', 'base.liquid')
 
 	// More ergonomic data.
-	eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents))
+	config.addDataExtension('yaml', contents => yaml.load(contents))
 
 	const markdown = markdownIt({
 		breaks:      true,
@@ -29,21 +29,21 @@ export default (eleventyConfig) => {
 		typographer: true,
 	})
 
-	// Make it available in the templates. (Using regular function for `this`.)
-	eleventyConfig.addFilter('markdown', async function (content) {
+	// Make it available in the templates. (Using regular functions for `this`.)
+	config.addFilter('markdown', async function (content) {
 		return markdown.render(await this.liquid.parseAndRender(content, this.context.environments))
 	})
 
 	// Override filter with relative URLs, for portability.
-	eleventyConfig.addFilter('url', function (target) {
+	config.addFilter('url', function (target) {
 		return toRelative(this.page.url, target)
 	})
 
 	// Resize images.
-	eleventyConfig.addAsyncShortcode('resizedImg', async function (src, size) {
+	config.addAsyncShortcode('resizedImg', async function (src, size) {
 		const urlPath = '/assets/'
 
-		// `eleventy-img` sizes by width only, so get the intrinsic.
+		// `eleventy-img` sizes by width only, so get the intrinsic separately.
 		const { width: srcWidth, height: srcHeight } =
 			await imageDimensionsFromStream(ReadableStream.from(fs.createReadStream(src)))
 
@@ -67,8 +67,8 @@ export default (eleventyConfig) => {
 	})
 
 	// Copy cached images into the real output after each build.
-	eleventyConfig.on('eleventy.after', () => {
-		fs.cpSync(outputDir, path.join(eleventyConfig.directories.output, 'assets'), { recursive: true })
+	config.on('buildawesome.after', () => {
+		fs.cpSync(outputDir, path.join(config.directories.output, 'assets'), { recursive: true })
 	})
 
 	return {
