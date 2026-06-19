@@ -1,12 +1,15 @@
+> [!NOTE]
+> This is an in-progress, ground-up rebuild of the [previous MPS CD site](https://github.com/parsons/mpscd.parsons.edu), for reasons of simplicity, flexibility, and longevity. More to come!
+
 # MPS CD
 
-This is an in-progress, ground-up rebuild of the [previous](https://github.com/parsons/mpscd.parsons.edu) Parsons [MPS CD](https://www.newschool.edu/parsons/mps-communication-design/) program website, for reasons of simplicity, flexibility, and longevity.
+This is the program site for [Parsons’ Master of Professional Studies in Communication Design (MPS CD)](https://www.newschool.edu/parsons/mps-communication-design/).
 
 <br>
 
 ## The Setup
 
-This version is made with [Build Awesome](https://www.11ty.dev) (née Eleventy).
+The site is made with [Build Awesome](https://www.11ty.dev) (née Eleventy).
 
 Our content is fully abstracted and separated into the [`data` folder](data/), organized in [YAML files](https://www.11ty.dev/docs/data-custom/#yaml) (over JSON) for commenting and syntax forgiveness. Original/high-res project images are included here too, for simplicity—they are then resized, as needed, on build.
 
