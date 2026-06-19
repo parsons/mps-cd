@@ -1,4 +1,4 @@
-first:
+fall:
   - number:  PMCD 5101
     credits: 6
     title:   Major Studio 1
@@ -10,7 +10,7 @@ first:
     title:   Visual Culture Seminar
   - credits: 3
     title:   Elective
-second:
+spring:
   - number:  PMCD 5102
     credits: 6
     title:   Major Studio 2
