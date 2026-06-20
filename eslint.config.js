@@ -22,10 +22,10 @@ export default defineConfig([
 		rules: {
 			'yml/file-extension': ['error', { extension: 'yaml', caseSensitive: true }],
 			'yml/indent': ['error', 2, { indentBlockSequences: true }],
-			'yml/no-irregular-whitespace': 'off',
-			'yml/quotes': ['error', { prefer: 'single', avoidEscape: true }],
-			'yml/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
 			'yml/key-name-casing': 'error',
+			'yml/no-irregular-whitespace': 'off',
+			'yml/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+			'yml/quotes': ['error', { prefer: 'single', avoidEscape: true }],
 		},
 	},
 ])
