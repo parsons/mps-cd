@@ -1,10 +1,9 @@
-export default [
-	{
-		ignores: [
-			'_site',
-			'node_modules',
-		],
-	},
+import { defineConfig, includeIgnoreFile } from 'eslint/config'
+import { fileURLToPath } from 'node:url'
+
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url))
+export default defineConfig([
+	includeIgnoreFile(gitignorePath, { gitignoreResolution: true }),
 	{
 		rules: {
 			'arrow-parens': ['error', 'always'],
@@ -16,4 +15,4 @@ export default [
 			'semi': ['error', 'never'],
 		},
 	},
-]
+])
