@@ -13,8 +13,12 @@
 			"version": ">=22.13.0"
 		}
 	},
+	"lint-staged": {
+		"*": "eslint --fix --no-warn-ignored"
+	},
 	"packageManager": "pnpm@11.5.0",
 	"scripts": {
+		"prepare": "git config core.hooksPath .githooks",
 		"clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\"",
 		"build": "pnpm clean && buildawesome",
 		"serve": "pnpm clean && buildawesome --serve --port=80 --incremental",
@@ -23,6 +27,7 @@
 	"type": "module",
 	"devDependencies": {
 		"eslint": "^10.5.0",
-		"eslint-plugin-yml": "^3.4.0"
+		"eslint-plugin-yml": "^3.4.0",
+		"lint-staged": "^17.0.7"
 	}
 }
