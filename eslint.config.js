@@ -5,7 +5,6 @@ import eslintPluginYml from 'eslint-plugin-yml'
 export default defineConfig([
 	// Use `.gitignore`.
 	includeIgnoreFile(fileURLToPath(new URL('.gitignore', import.meta.url))),
-	...eslintPluginYml.configs.recommended,
 	{
 		rules: {
 			'arrow-parens': ['error', 'always'],
@@ -18,7 +17,8 @@ export default defineConfig([
 		},
 	},
 	{
-		files: ['**/*.yml', '**/*.yaml'],
+		files: ['data/**/*.{yml,yaml}'],
+		extends: [eslintPluginYml.configs.recommended],
 		rules: {
 			'yml/file-extension': ['error', { extension: 'yaml', caseSensitive: true }],
 			'yml/indent': ['error', 2, { indentBlockSequences: true }],
