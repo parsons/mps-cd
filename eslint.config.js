@@ -25,6 +25,7 @@ export default defineConfig([
 			'yml/no-irregular-whitespace': 'off',
 			'yml/quotes': ['error', { prefer: 'single', avoidEscape: true }],
 			'yml/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
+			'yml/key-name-casing': 'error',
 		},
 	},
 ])
