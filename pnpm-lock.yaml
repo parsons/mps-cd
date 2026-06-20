@@ -226,6 +226,9 @@ importers:
       eslint:
         specifier: ^10.5.0
         version: 10.5.0
+      eslint-plugin-yml:
+        specifier: ^3.4.0
+        version: 3.4.0(eslint@10.5.0)
       node:
         specifier: runtime:>=22.13.0
         version: runtime:26.3.0
@@ -469,6 +472,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@ota-meshi/ast-token-store@0.3.0':
+    resolution: {integrity: sha512-XRO0zi2NIUKq2lUk3T1ecFSld1fMWRKE6naRFGkgkdeosx7IslyUKNv5Dcb5PJTja9tHJoFu0v/7yEpAkrkrTg==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
   '@rgrove/parse-xml@4.2.0':
     resolution: {integrity: sha512-UuBOt7BOsKVOkFXRe4Ypd/lADuNIfqJXv8GvHqtXaTYXPPKkj2nS2zPllVsrtRjcomDhIJVBnZwfmlI222WH8g==}
     engines: {node: '>=14.0.0'}
@@ -592,6 +599,10 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
+  diff-sequences@29.6.3:
+    resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
   dom-serializer@1.4.1:
     resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
 
@@ -648,6 +659,12 @@ packages:
   escape-string-regexp@5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
+
+  eslint-plugin-yml@3.4.0:
+    resolution: {integrity: sha512-j6U3ESrAkidkvNb3HFN2UMxke46GNp6bsJokabXCICcgomSy3YU4oED9cjzkZ58nYxWD5qnWV1b/2YlqyWMOxA==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
+    peerDependencies:
+      eslint: '>=9.38.0'
 
   eslint-scope@9.1.2:
     resolution: {integrity: sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ==}
@@ -1217,6 +1234,15 @@ packages:
       utf-8-validate:
         optional: true
 
+  yaml-eslint-parser@2.0.0:
+    resolution: {integrity: sha512-h0uDm97wvT2bokfwwTmY6kJ1hp6YDFL0nRHwNKz8s/VD1FH/vvZjAKoMUE+un0eaYBSG7/c6h+lJTP+31tjgTw==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  yaml@2.9.0:
+    resolution: {integrity: sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -1496,6 +1522,8 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
+  '@ota-meshi/ast-token-store@0.3.0': {}
+
   '@rgrove/parse-xml@4.2.0': {}
 
   '@sindresorhus/slugify@3.0.0':
@@ -1601,6 +1629,8 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
+  diff-sequences@29.6.3: {}
+
   dom-serializer@1.4.1:
     dependencies:
       domelementtype: 2.3.0
@@ -1644,6 +1674,17 @@ snapshots:
   escape-string-regexp@4.0.0: {}
 
   escape-string-regexp@5.0.0: {}
+
+  eslint-plugin-yml@3.4.0(eslint@10.5.0):
+    dependencies:
+      '@eslint/core': 1.2.1
+      '@eslint/plugin-kit': 0.7.2
+      '@ota-meshi/ast-token-store': 0.3.0
+      diff-sequences: 29.6.3
+      escape-string-regexp: 5.0.0
+      eslint: 10.5.0
+      natural-compare: 1.4.0
+      yaml-eslint-parser: 2.0.0
 
   eslint-scope@9.1.2:
     dependencies:
@@ -2079,5 +2120,12 @@ snapshots:
   word-wrap@1.2.5: {}
 
   ws@8.21.0: {}
+
+  yaml-eslint-parser@2.0.0:
+    dependencies:
+      eslint-visitor-keys: 5.0.1
+      yaml: 2.9.0
+
+  yaml@2.9.0: {}
 
   yocto-queue@0.1.0: {}
