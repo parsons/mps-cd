@@ -15,12 +15,12 @@ const toRelative = (from, target) => {
 // Cache for faster local serving.
 const outputDir = '.cache/'
 
-export default config => {
+export default (config) => {
 	// Set common base layout for everything.
 	config.addGlobalData('layout', 'base.liquid')
 
 	// More ergonomic data.
-	config.addDataExtension('yaml', contents => yaml.load(contents))
+	config.addDataExtension('yaml', (contents) => yaml.load(contents))
 
 	const markdown = markdownIt({
 		breaks:      true,
@@ -80,6 +80,6 @@ export default config => {
 			data: '../data',
 			includes: '../templates/components',
 			layouts: '../templates',
-		}
+		},
 	}
 }
