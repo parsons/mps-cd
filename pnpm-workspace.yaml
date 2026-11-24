@@ -1,2 +1,4 @@
 allowBuilds:
   sharp: true
+
+minimumReleaseAge: 0
