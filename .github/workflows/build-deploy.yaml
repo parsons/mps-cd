@@ -38,5 +38,9 @@ jobs:
         uses: actions/configure-pages@v6
       - name: Upload output…
         uses: actions/upload-pages-artifact@v5
+        with:
+          name: github-pages-${{ github.run_attempt }}
       - name: Deploy Pages!
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
