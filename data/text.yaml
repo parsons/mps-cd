@@ -44,30 +44,30 @@ apply:
     # What would you create?
 
     The application deadline is January 5. To be most competitive for admission and merit scholarship consideration, please apply before the deadline. We will continue to review applications submitted after the deadline pending space availability in the program. The Admission Committee will make a decision on your application only after all the required materials have been received. Spring term admission is not offered for this program.
-  cta: Apply
+  cta:   Apply
   outro: |
     For more information, please contact our [admissions office]({{ links.requestInfo }}).
 
 footer:
   section:
     - heading: Request Information
-      blurb: |
+      blurb:   |
         More info can be found in the Admissions Office’s [Admissions Request Form]({{ links.requestInfo }})
 
     - heading: Admission Events
-      blurb: |
+      blurb:   |
         Find out about upcoming events using the [Graduate Admission Events Calendar]({{ links.events }})
 
     - heading: Admission Contact
-      blurb: |
+      blurb:   |
         Admissions Office: thinkparsonsgrad@newschool.edu
 
     - heading: Program Contact
-      blurb: |
+      blurb:   |
         Andrew LeClair, Director: leclaira@newschool.edu
   colophon:
     heading: Colophon
-    blurb: |
+    blurb:   |
       This site was built with the help of Parsons MPS faculty and students (Patrick, [Stephany](https://stephanymadi.com), [Yifu](https://www.yifuzhang.xyz/), and [Defne](https://www.defnekaynak.com/)) in collaboration with [XXIX](http://www.xxix.co). <!--The [custom typeface](https://github.com/XXIX/mps-typeface) is open-source and can be contributed to by the MPS community.-->
     license: |
       [![](https://mirrors.creativecommons.org/presskit/icons/cc.svg)![](https://mirrors.creativecommons.org/presskit/icons/by.svg)![](https://mirrors.creativecommons.org/presskit/icons/nc.svg)![](https://mirrors.creativecommons.org/presskit/icons/sa.svg) CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)

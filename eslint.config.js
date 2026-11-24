@@ -23,6 +23,7 @@ export default defineConfig([
 			'yml/file-extension': ['error', { extension: 'yaml', caseSensitive: true }],
 			'yml/indent': ['error', 2, { indentBlockSequences: true }],
 			'yml/key-name-casing': 'error',
+			'yml/key-spacing': ['error', { align: 'value' }],
 			'yml/no-irregular-whitespace': 'off',
 			'yml/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0, maxBOF: 0 }],
 			'yml/quotes': ['error', { prefer: 'single', avoidEscape: true }],

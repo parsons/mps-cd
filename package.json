@@ -14,7 +14,7 @@
 		}
 	},
 	"lint-staged": {
-		"*": "eslint --fix --no-warn-ignored"
+		"*": "eslint --no-warn-ignored"
 	},
 	"packageManager": "pnpm@11.5.0",
 	"scripts": {
