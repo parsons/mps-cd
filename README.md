@@ -15,7 +15,9 @@ The site is made with [Build Awesome](https://www.11ty.dev) (née Eleventy).
 
 Our content is fully abstracted and separated into the [`data` folder](data/), organized in [YAML files](https://www.11ty.dev/docs/data-custom/#yaml) (over JSON) for commenting and syntax forgiveness. Original/high-res project images are included here too, for simplicity—they are then resized, as needed, on build.
 
-Pulling from this, our [pages](pages/) are strung together with 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/) generating good, old-fashioned HTML. ~~There is only plain/native CSS and vanilla JavaScript on top of that—no Sass, no pipeline, no framework, no fuss.~~ *Still to come!*
+Pulling from this, our [pages](pages/) are strung together with some [components](templates/components/) using 11ty’s default `.liquid` [template engine](https://www.11ty.dev/docs/languages/liquid/) to generate good, old-fashioned HTML.
+
+Our CSS is all native, too! We pull in a [reset](assets/reset.css), [bundling](https://www.11ty.dev/docs/plugins/bundle/) the [base styles](assets/styles/) listed in [`styles.liquid`](templates/components/styles.liquid), along with styles in the [components](templates/components/) themselves. These are imported into [cascade layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer), with newly-hashed filenames each build. (More to come, here!)
 
 You will need `pnpm` [on your machine](https://pnpm.io/installation). Then run `pnpm install` once to grab our handful of [build dependencies](package.json).
 
