@@ -1,9 +1,10 @@
 import { imageDimensionsFromStream } from 'image-dimensions'
+import { load } from 'js-yaml'
+import { RenderPlugin } from '@awesome.me/buildawesome'
 import fs from 'node:fs'
 import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
-import { load } from 'js-yaml'
 
 // Relative URL helper.
 const toRelative = (from, target) => {
@@ -20,6 +21,22 @@ export default (config) => {
 
 	// Set common base layout for everything.
 	config.addGlobalData('layout', 'base.liquid')
+
+	config.addPassthroughCopy('assets/reset.css')
+
+	// Try to future-proof `styles.liquid` for eventual rename:
+	// https://github.com/11ty/eleventy-plugin-bundle/blob/main/src/BundlePlucker.js#L8-L12
+	config.addBundle('css', {
+		bundleHtmlContentFromSelector: 'style[buildawesome:bucket="components"]',
+		toFileDirectory: 'assets',
+	})
+
+	// Full rebuilds are needed for re-bundling.
+	config.addWatchTarget('**/*.css', { resetConfig: true })
+	config.addWatchTarget('**/*.js', { resetConfig: true })
+
+	config.addPlugin(RenderPlugin) // To render out bundled CSS.
+	config.addExtension('css', { compile: (content) => () => content }) // Read CSS as-is with `renderFile`.
 
 	// More ergonomic data.
 	config.addDataExtension('yaml', (contents) => load(contents))

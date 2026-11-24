@@ -1,0 +1,10 @@
+{% css 'base' %}
+	{% renderFile './assets/styles/base.css' %}
+{% endcss %}
+<style>
+	@layer reset, base, components;
+
+	@import url('{{ '/assets/reset.css' | url }}') layer(reset);
+	@import url('{{ '/' | url | remove_last: '/' }}{% getBundleFileUrl 'css', 'base' %}') layer(base);
+	@import url('{{ '/' | url | remove_last: '/' }}{% getBundleFileUrl 'css' %}') layer(components);
+</style>
