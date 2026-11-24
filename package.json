@@ -1,16 +1,16 @@
 {
 	"dependencies": {
-		"@11ty/eleventy-img": "^6.0.4",
-		"@awesome.me/buildawesome": "4.0.0-alpha.8",
-		"image-dimensions": "^2.5.1",
-		"js-yaml": "^4.2.0",
-		"markdown-it": "^14.2.0"
+		"@11ty/eleventy-img": "^7.1.1",
+		"@awesome.me/buildawesome": "4.0.0-alpha.12",
+		"image-dimensions": "^2.6.0",
+		"js-yaml": "^5.5.0",
+		"markdown-it": "^15.0.3"
 	},
 	"devEngines": {
 		"runtime": {
 			"name": "node",
 			"onFail": "download",
-			"version": ">=22.13.0"
+			"version": "26"
 		}
 	},
 	"lint-staged": {
@@ -26,8 +26,8 @@
 	},
 	"type": "module",
 	"devDependencies": {
-		"eslint": "^10.5.0",
-		"eslint-plugin-yml": "^3.4.0",
-		"lint-staged": "^17.0.7"
+		"eslint": "^10.15.0",
+		"eslint-plugin-yml": "^3.10.0",
+		"lint-staged": "^17.6.2"
 	}
 }

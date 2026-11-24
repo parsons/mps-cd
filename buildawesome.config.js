@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import Image from '@11ty/eleventy-img'
 import markdownIt from 'markdown-it'
 import path from 'node:path'
-import yaml from 'js-yaml'
+import { load } from 'js-yaml'
 
 // Relative URL helper.
 const toRelative = (from, target) => {
@@ -16,11 +16,13 @@ const toRelative = (from, target) => {
 const outputDir = '.cache/'
 
 export default (config) => {
+	config.setServerOptions({ host: '0.0.0.0' }) // Allow local IP/hostname for `--serve`.
+
 	// Set common base layout for everything.
 	config.addGlobalData('layout', 'base.liquid')
 
 	// More ergonomic data.
-	config.addDataExtension('yaml', (contents) => yaml.load(contents))
+	config.addDataExtension('yaml', (contents) => load(contents))
 
 	const markdown = markdownIt({
 		breaks:      true,
@@ -28,6 +30,8 @@ export default (config) => {
 		linkify:     true,
 		typographer: true,
 	})
+
+	markdown.linkify.set({ fuzzyLink: true }) // Allow “fuzzy” links, ex: example.com
 
 	// Make it available in the templates. (Using regular functions for `this`.)
 	config.addFilter('markdown', async function (content) {
